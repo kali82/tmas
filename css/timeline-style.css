@@ -113,7 +113,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: #FF0;
+  background-color: rgb(25, 0, 255);
 }
 
 .ag-timeline-card_box {
@@ -133,7 +133,7 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid #FF0;
+  border: 3px solid rgb(25, 0, 255);
   background-color: #1d1d1b;
 
   text-align: center;
@@ -147,7 +147,7 @@ img {
 }
 .js-ag-active .ag-timeline-card_point {
   color: #1d1d1b;
-  background-color: #FF0;
+  background-color: rgb(25, 0, 255);
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -158,7 +158,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: #FF0;
+  color: rgb(25, 0, 255);
 }
 .ag-timeline-card_item {
   display: inline-block;
@@ -248,7 +248,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: #FF0;
+  color: rgb(25, 0, 255);
 }
 .ag-timeline-card_desc {
   line-height: 1.45;
