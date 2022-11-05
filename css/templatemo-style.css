@@ -11,6 +11,13 @@ https://templatemo.com/tm-513-avalon
     padding: 0;
     font-family: 'Open Sans', arial, sans-serif;
 }
+.logo {
+	position: absolute;
+	width: 400px;
+	height: 100px;
+	top: 0;
+	left: 0;
+  }
 #map {
 	height: 800px;
 	/* The height is 400 pixels */
@@ -18,7 +25,7 @@ https://templatemo.com/tm-513-avalon
 	/* The width is the width of the web page */
   }
 .homepage-backround {
-	background-image: url('../img/cysterna-back.webp');
+	background-image: url('../img/homepage-background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
