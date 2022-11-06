@@ -18,11 +18,14 @@ map.on('style.load', () => {
 // map.setFog({ 'horizon-blend': 0.05 }); // Enable stars with reduced atmosphere
 });
  
-// San Francisco
+// POLAND
 const origin = [21.017532, 52.237049];
  
-// Washington DC
+// GERMANY
 const destination = [9.297722095222504, 50.716043395221334];
+
+// CECHIA
+const destinationCechia = [14.738765121110976, 49.719840790734615];
  
 // A simple line from origin to destination.
 const route = {
@@ -37,7 +40,35 @@ const route = {
 }
 ]
 };
- 
+
+//CECHIA ROUTE
+const cechiaRoute = {
+    'type': 'FeatureCollection',
+    'features': [
+    {
+    'type': 'Feature',
+    'geometry': {
+    'type': 'LineString',
+    'coordinates': [origin, destinationCechia]
+    }
+    }
+    ]
+    };
+ // A single point that animates along the route.
+// Coordinates are initially set to origin.
+const cechiaPoint = {
+    'type': 'FeatureCollection',
+    'features': [
+    {
+    'type': 'Feature',
+    'properties': {},
+    'geometry': {
+    'type': 'Point',
+    'coordinates': origin
+    }
+    }
+    ]
+    };
 // A single point that animates along the route.
 // Coordinates are initially set to origin.
 const point = {
@@ -56,9 +87,12 @@ const point = {
  
 // Calculate the distance in kilometers between route start/end point.
 const lineDistance = turf.length(route.features[0]);
+// Calculate the distance in kilometers between route start/end point.
+const cechiaLineDistance = turf.length(cechiaRoute.features[0]);
  
 const arc = [];
- 
+const cechiaArc = [];
+
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
@@ -69,16 +103,23 @@ for (let i = 0; i < lineDistance; i += lineDistance / steps) {
 const segment = turf.along(route.features[0], i);
 arc.push(segment.geometry.coordinates);
 }
+
+// Draw an  CECHIA arc between the `origin` & `destination` of the two points
+for (let i = 0; i < cechiaLineDistance; i += cechiaLineDistance / steps) {
+    const segment = turf.along(cechiaRoute.features[0], i);
+    cechiaArc.push(segment.geometry.coordinates);
+    }
  
 // Update the route with calculated arc coordinates
 route.features[0].geometry.coordinates = arc;
+// Update the cechia route with calculated arc coordinates
+cechiaRoute.features[0].geometry.coordinates = cechiaArc;
  
 // Used to increment the value of the point measurement against the route.
 let counter = 0;
- 
 
 
-map.on('render', () => {
+map.on('idle', () => {
     //  map.setLayoutProperty('country-label', 'text-field', ['get','name_pol']);
 
 // Add a source and layer displaying a point which will be animated in a circle.
@@ -86,11 +127,19 @@ map.on('render', () => {
     'type': 'geojson',
     'data': route
     });
+    map.addSource('cechiaRoute', {
+        'type': 'geojson',
+        'data': cechiaRoute
+    });
  
     map.addSource('point', {
     'type': 'geojson',
     'data': point
     });
+    map.addSource('cechiaPoint', {
+        'type': 'geojson',
+        'data': cechiaPoint
+        });
  
     map.addLayer({
     'id': 'route',
@@ -101,10 +150,38 @@ map.on('render', () => {
         'line-color': '#007cbf'
     }
     });
+    map.addLayer({
+        'id': 'cechiaRoute',
+        'source': 'cechiaRoute',
+        'type': 'line',
+        'paint': {
+            'line-width': 2,
+            'line-color': '#007cbf'
+        }
+    });
  
     map.addLayer({
         'id': 'point',
         'source': 'point',
+        'type': 'symbol',
+        'layout': {
+            // This icon is a part of the Mapbox Streets style.
+            // To view all images available in a Mapbox style, open
+            // the style in Mapbox Studio and click the "Images" tab.
+            // To add a new image to the style at runtime see
+            // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
+            'icon-image': 'airport-15',
+            'icon-size': 2,
+            'icon-rotate': ['get', 'bearing'],
+            'icon-rotation-alignment': 'map',
+            'icon-allow-overlap': true,
+            'icon-ignore-placement': true
+        }
+    });
+     
+    map.addLayer({
+        'id': 'cechiaPoint',
+        'source': 'cechiaPoint',
         'type': 'symbol',
         'layout': {
             // This icon is a part of the Mapbox Streets style.
@@ -214,6 +291,54 @@ function animate() {
     //     animate(counter);
     // }
 }
+function animateCechia() {
+    const start =
+    cechiaRoute.features[0].geometry.coordinates[
+    counter >= steps ? counter - 1 : counter
+    ];
+    const end =
+    cechiaRoute.features[0].geometry.coordinates[
+    counter >= steps ? counter : counter + 1
+    ];
+    if (!start || !end) return;
+    
+    // Update point geometry to a new position based on counter denoting
+    // the index to access the arc
+    cechiaPoint.features[0].geometry.coordinates =
+    cechiaRoute.features[0].geometry.coordinates[counter];
+    
+    // Calculate the bearing to ensure the icon is rotated to match the route arc
+    // The bearing is calculated between the current point and the next point, except
+    // at the end of the arc, which uses the previous point and the current point
+    cechiaPoint.features[0].properties.bearing = turf.bearing(
+    turf.point(start),
+    turf.point(end)
+    );
+    
+    // Update the source with this new data
+    map.getSource('cechiaPoint').setData(cechiaPoint);
+    
+    // Request the next frame of animation as long as the end has not been reached
+    if (counter < steps) {
+    requestAnimationFrame(animateCechia);
+    }
+    
+    counter = counter + 1;
+    // if(counter == 100){
+    //     window.setTimeout(100)
+    //     // Set the coordinates of the original point back to origin
+    //     point.features[0].geometry.coordinates = origin;
+        
+    //     // Update the source layer
+    //     map.getSource('point').setData(point);
+
+    //     // Reset the counter
+    //     counter = 0;
+
+    //     // Restart the animation
+    //     animate(counter);
+    // }
+}
 
 // read the link on how above code works
 var findMe = document.querySelectorAll('#map');
@@ -225,6 +350,7 @@ window.addEventListener('scroll', function(event) {
       if (isInViewport(element)) {
         //if in Viewport
          animate(0)
+         animateCechia(0)
         element.classList.add("draw");
         
       } else {
@@ -232,9 +358,13 @@ window.addEventListener('scroll', function(event) {
         window.setTimeout(100)
         // Set the coordinates of the original point back to origin
         point.features[0].geometry.coordinates = origin;
+        cechiaPoint.features[0].geometry.coordinates = origin;
+
 
         // Update the source layer
         map.getSource('point').setData(point);
+        map.getSource('cechiaPoint').setData(cechiaPoint);
+
 
         // Reset the counter
         counter = 0;
