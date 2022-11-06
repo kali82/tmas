@@ -1,3 +1,4 @@
+
 var isInViewport = function(elem) {
   var distance = elem.getBoundingClientRect();
   return (
@@ -7,20 +8,7 @@ var isInViewport = function(elem) {
     distance.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
-// read the link on how above code works
 
-var findMe = document.querySelectorAll('.mapXD');
-
-window.addEventListener('scroll', function(event) {
-// add event on scroll
-findMe.forEach(element => {
-    //for each .thisisatest
-    if (isInViewport(element)) {
-      //if in Viewport
-      element.classList.add("draw");
-    }
-});
-}, false);
 
 jQuery(document).ready(function($) {
 

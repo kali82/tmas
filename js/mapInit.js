@@ -76,6 +76,8 @@ route.features[0].geometry.coordinates = arc;
 // Used to increment the value of the point measurement against the route.
 let counter = 0;
  
+
+
 map.on('render', () => {
     //  map.setLayoutProperty('country-label', 'text-field', ['get','name_pol']);
 
@@ -141,54 +143,7 @@ map.on('render', () => {
         'POL'
       ]);
  
-    function animate() {
-        const start =
-        route.features[0].geometry.coordinates[
-        counter >= steps ? counter - 1 : counter
-        ];
-        const end =
-        route.features[0].geometry.coordinates[
-        counter >= steps ? counter : counter + 1
-        ];
-        if (!start || !end) return;
-        
-        // Update point geometry to a new position based on counter denoting
-        // the index to access the arc
-        point.features[0].geometry.coordinates =
-        route.features[0].geometry.coordinates[counter];
-        
-        // Calculate the bearing to ensure the icon is rotated to match the route arc
-        // The bearing is calculated between the current point and the next point, except
-        // at the end of the arc, which uses the previous point and the current point
-        point.features[0].properties.bearing = turf.bearing(
-        turf.point(start),
-        turf.point(end)
-        );
-        
-        // Update the source with this new data
-        map.getSource('point').setData(point);
-        
-        // Request the next frame of animation as long as the end has not been reached
-        if (counter < steps) {
-        requestAnimationFrame(animate);
-        }
-        
-        counter = counter + 1;
-        // if(counter == 100){
-        //     window.setTimeout(100)
-        //     // Set the coordinates of the original point back to origin
-        //     point.features[0].geometry.coordinates = origin;
-            
-        //     // Update the source layer
-        //     map.getSource('point').setData(point);
-    
-        //     // Reset the counter
-        //     counter = 0;
-    
-        //     // Restart the animation
-        //     animate(counter);
-        // }
-    }
+      
  
     // document.getElementById('replay').addEventListener('click', () => {
     //     // Set the coordinates of the original point back to origin
@@ -204,10 +159,88 @@ map.on('render', () => {
     //     animate(counter);
     // });
     //Start the animation
-    animate(counter);
+    // animate(counter);
 
 });
 // window.onload(function() {
 //     // Start the animation
 // }, 120);
 // animate(0);
+function animate() {
+    const start =
+    route.features[0].geometry.coordinates[
+    counter >= steps ? counter - 1 : counter
+    ];
+    const end =
+    route.features[0].geometry.coordinates[
+    counter >= steps ? counter : counter + 1
+    ];
+    if (!start || !end) return;
+    
+    // Update point geometry to a new position based on counter denoting
+    // the index to access the arc
+    point.features[0].geometry.coordinates =
+    route.features[0].geometry.coordinates[counter];
+    
+    // Calculate the bearing to ensure the icon is rotated to match the route arc
+    // The bearing is calculated between the current point and the next point, except
+    // at the end of the arc, which uses the previous point and the current point
+    point.features[0].properties.bearing = turf.bearing(
+    turf.point(start),
+    turf.point(end)
+    );
+    
+    // Update the source with this new data
+    map.getSource('point').setData(point);
+    
+    // Request the next frame of animation as long as the end has not been reached
+    if (counter < steps) {
+    requestAnimationFrame(animate);
+    }
+    
+    counter = counter + 1;
+    // if(counter == 100){
+    //     window.setTimeout(100)
+    //     // Set the coordinates of the original point back to origin
+    //     point.features[0].geometry.coordinates = origin;
+        
+    //     // Update the source layer
+    //     map.getSource('point').setData(point);
+
+    //     // Reset the counter
+    //     counter = 0;
+
+    //     // Restart the animation
+    //     animate(counter);
+    // }
+}
+
+// read the link on how above code works
+var findMe = document.querySelectorAll('#map');
+
+window.addEventListener('scroll', function(event) {
+  // add event on scroll
+  findMe.forEach(element => {
+      //for each .thisisatest
+      if (isInViewport(element)) {
+        //if in Viewport
+         animate(0)
+        element.classList.add("draw");
+        
+      } else {
+        element.classList.remove("draw");
+        window.setTimeout(100)
+        // Set the coordinates of the original point back to origin
+        point.features[0].geometry.coordinates = origin;
+
+        // Update the source layer
+        map.getSource('point').setData(point);
+
+        // Reset the counter
+        counter = 0;
+
+        // Restart the animation
+        //animate(counter);
+      }
+  });
+  }, false);
