@@ -8,7 +8,9 @@ var isInViewport = function(elem) {
     distance.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
-
+function xd(){
+document.getElementById('xd').scrollIntoView();
+}
 
 jQuery(document).ready(function($) {
 

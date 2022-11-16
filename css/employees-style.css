@@ -1,6 +1,9 @@
 *{
     font-family:Nunito, sans-serif;
   }
+  .employees {
+    background-image: url(../img/pracownicy-back-1.jpeg) !important;
+  }
   .text-blk{
     margin-top:0px;
     margin-right:0px;

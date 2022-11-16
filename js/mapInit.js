@@ -5,7 +5,7 @@
 const map = new mapboxgl.Map({
 container: 'map',
 // Choose from Mapbox's core styles, or make your own style with Mapbox Studio,
-style: 'mapbox://styles/mapbox/dark-v10',
+style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
 center: [10, 48.8],
 zoom: 4,
 pitch: 10,
@@ -96,7 +96,7 @@ const cechiaArc = [];
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
-const steps = 100;
+const steps = 400;
  
 // Draw an arc between the `origin` & `destination` of the two points
 for (let i = 0; i < lineDistance; i += lineDistance / steps) {
@@ -354,20 +354,25 @@ window.addEventListener('scroll', function(event) {
         element.classList.add("draw");
         
       } else {
-        element.classList.remove("draw");
-        window.setTimeout(100)
-        // Set the coordinates of the original point back to origin
-        point.features[0].geometry.coordinates = origin;
-        cechiaPoint.features[0].geometry.coordinates = origin;
+        // element.classList.remove("draw");
+        // // window.setTimeout(100)
+        // // Set the coordinates of the original point back to origin
+        // if (point.features[0].geometry.coordinates != origin){
+        //     point.features[0].geometry.coordinates = origin;
+        //     map.getSource('point').setData(point);
+
+        // }
+        
+        // cechiaPoint.features[0].geometry.coordinates = origin;
 
 
         // Update the source layer
-        map.getSource('point').setData(point);
-        map.getSource('cechiaPoint').setData(cechiaPoint);
+   
+       // map.getSource('cechiaPoint').setData(cechiaPoint);
 
 
-        // Reset the counter
-        counter = 0;
+        // // Reset the counter
+         counter = 0;
 
         // Restart the animation
         //animate(counter);

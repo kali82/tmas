@@ -48,11 +48,22 @@ https://templatemo.com/tm-513-avalon
 	background-color: #4ea0da;
 }
 .homepage-backround {
-	background-image: url('../img/homepage-background.jpeg');
+	background-image: url('../img/home-background-new.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
     background-position-x: left;
+}
+.aboutUs-info {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 20%;
+	transition: 0.3s;
+	color: white;
+
+
 }
 .col-details {
 	display: none;

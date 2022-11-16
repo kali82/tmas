@@ -1,9 +1,11 @@
 body {
-  background-color: #000;
+  background-color: rgb(255, 254, 254);
 
+  overflow-x: hidden !important;
+}
+html {
   overflow-x: hidden;
 }
-
 @font-face {
   font-family: 'ESL Legend';
   src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
