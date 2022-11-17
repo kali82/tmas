@@ -2,21 +2,36 @@
 	// ADD YOUR ACCESS TOKEN FROM
 	// https://account.mapbox.com
 	mapboxgl.accessToken = 'pk.eyJ1Ijoia2FsaXN6ZXdza2ltYWNpZWoiLCJhIjoiY2xhM3pwaTg0MHRybTNvbzNuOHNyaGIxbSJ9.7nRYsGaNM6fm20SwouHyQw';
-const map = new mapboxgl.Map({
-container: 'map',
-// Choose from Mapbox's core styles, or make your own style with Mapbox Studio,
-style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
-center: [10, 48.8],
-zoom: 4,
-pitch: 10,
-projection: 'globe',
-locale: 'pl-pl'
-
-});
+let map
+if (window.matchMedia('(max-width: 767px)').matches) {
+     map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio,
+        style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
+        center: [15, 48.8],
+        zoom: 3,
+        pitch: 20,
+        projection: 'globe',
+        locale: 'pl-pl'
+        
+        });
+} else {
+     map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio,
+        style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
+        center: [15, 48.8],
+        zoom: 4.5,
+        pitch: 20,
+        projection: 'globe',
+        locale: 'pl-pl'
+        
+        });
+}
  
-map.on('style.load', () => {
-// map.setFog({ 'horizon-blend': 0.05 }); // Enable stars with reduced atmosphere
-});
+// map.on('style.load', () => {
+// // map.setFog({ 'horizon-blend': 0.05 }); // Enable stars with reduced atmosphere
+// });
  
 // POLAND
 const origin = [21.017532, 52.237049];
@@ -171,7 +186,7 @@ map.on('idle', () => {
             // To add a new image to the style at runtime see
             // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
             'icon-image': 'airport-15',
-            'icon-size': 2,
+            'icon-size': 1.5,
             'icon-rotate': ['get', 'bearing'],
             'icon-rotation-alignment': 'map',
             'icon-allow-overlap': true,
@@ -190,7 +205,7 @@ map.on('idle', () => {
             // To add a new image to the style at runtime see
             // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
             'icon-image': 'airport-15',
-            'icon-size': 2,
+            'icon-size': 1.5,
             'icon-rotate': ['get', 'bearing'],
             'icon-rotation-alignment': 'map',
             'icon-allow-overlap': true,

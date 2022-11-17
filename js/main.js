@@ -8,6 +8,20 @@ var isInViewport = function(elem) {
     distance.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "kaliszewskimaciej@gmail.com",
+    Password: "Gunner68rh25!",
+    To: 'kaliszewskimaciej@gmail.com',
+    From: "kaliszewskimaciej@gmail.com",
+    Subject: "Sending Email using javascript",
+    Body: "Well that was easy!!",
+  })
+    .then(function (message) {
+      alert("mail sent successfully "+ message)
+    });
+}
 function xd(){
 document.getElementById('xd').scrollIntoView();
 }

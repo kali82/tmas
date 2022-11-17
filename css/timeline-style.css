@@ -1,11 +1,12 @@
-body {
-  background-color: rgb(255, 254, 254);
-
-  overflow-x: hidden !important;
-}
 html {
   overflow-x: hidden;
 }
+body {
+  background-color: #FFF;
+
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: 'ESL Legend';
   src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
@@ -115,7 +116,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: rgb(25, 0, 255);
+  background-color: #007cbf;
 }
 
 .ag-timeline-card_box {
@@ -135,7 +136,7 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid rgb(25, 0, 255);
+  border: 3px solid #007cbf;
   background-color: #1d1d1b;
 
   text-align: center;
@@ -149,7 +150,7 @@ img {
 }
 .js-ag-active .ag-timeline-card_point {
   color: #1d1d1b;
-  background-color: rgb(25, 0, 255);
+  background-color: #007cbf;
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -160,7 +161,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: rgb(25, 0, 255);
+  color: #282828;
 }
 .ag-timeline-card_item {
   display: inline-block;
@@ -250,7 +251,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: rgb(25, 0, 255);
+  color: #476C21;
 }
 .ag-timeline-card_desc {
   line-height: 1.45;

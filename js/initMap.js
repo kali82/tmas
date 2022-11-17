@@ -1,5 +1,5 @@
 //         //Defining map as a global variable to access from other functions
-//         var map;
+         var map2;
 //         var polyline;
 //         let germanyPolyline;
 //         let cechPolyline;
@@ -138,27 +138,27 @@
 //             },20);
 //         }
  
-//         function initMap() {
-//             //Enabling new cartography and themes
-//             google.maps.visualRefresh = true;
+        // function initMap() {
+        //     //Enabling new cartography and themes
+        //     google.maps.visualRefresh = true;
  
-//             //Setting starting options of map
-//             var mapOptions = {
-//                 center: new google.maps.LatLng(47.5550609,18.5756966),
-//                 zoom: 5,
-//                 // mapTypeId: google.maps.MapTypeId.ROADMAP
-//             };
+        //     //Setting starting options of map
+        //     var mapOptions = {
+        //         center: new google.maps.LatLng(47.5550609,18.5756966),
+        //         zoom: 5,
+        //         // mapTypeId: google.maps.MapTypeId.ROADMAP
+        //     };
  
-//             //Getting map DOM element
-//             var mapElement = document.getElementById('map');
+        //     //Getting map DOM element
+        //     var mapElement = document.getElementById('contact-map');
  
-//             //Creating a map with DOM element which is just obtained
-//             map = new google.maps.Map(mapElement, mapOptions);
+        //     //Creating a map with DOM element which is just obtained
+        //     map = new google.maps.Map(mapElement, mapOptions);
  
-//             addAnimatedPolyline();
-//         }
+        //     //addAnimatedPolyline();
+        // }
  
-//         google.maps.event.addDomListener(window, 'load', initMap);
+        // google.maps.event.addDomListener(window, 'load', initMap);
 
 
 
@@ -166,20 +166,20 @@
 
 
 
-// // // Initialize and add the map
-// // function initMap() {
-// //     // The location of Uluru
-// //     const polandLocation = { lat: 52.237049, lng: 21.017532 };
-// //     // The map, centered at Uluru
-// //     const map = new google.maps.Map(document.getElementById("map"), {
-// //       zoom: 5,
-// //       center: polandLocation,
-// //     });
-// //     // The marker, positioned at Uluru
-// //     const marker = new google.maps.Marker({
-// //       position: polandLocation,
-// //       map: map,
-// //     });
-// //   }
+// Initialize and add the map51.961104338425066, 15.544904171130122
+function initMap() {
+    // The location of Uluru
+    const officeLocation = { lat: 51.961104338425066, lng: 15.544904171130122 };
+    // The map, centered at Uluru
+    const map2 = new google.maps.Map(document.getElementById("contact-map"), {
+      zoom: 11,
+      center: officeLocation,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: officeLocation,
+      map: map2,
+    });
+  }
   
-//   //window.initMap = initMap;
+window.initMap = initMap;
