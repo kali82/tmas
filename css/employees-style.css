@@ -1,6 +1,22 @@
 *{
     font-family:Nunito, sans-serif;
   }
+  .employees-title {
+    text-align: center;
+    font-size: xxx-large;
+    color: white;
+    padding-bottom: 70px;
+  }
+  .employees-left-text{
+    font-size: large;
+    line-height: 40px;
+    color: white;
+  }
+  .employees-right-text{
+    font-size: large;
+    line-height: 40px;
+    color: white;
+  }
   .employees-header {
     color: #D9D9D9;
     line-height: 70px;
@@ -9,6 +25,8 @@
     text-decoration-color: #999;
   }
   .employees2 {
+    display: grid;
+    min-height: 700px;
     align-content: center;
     /* height: 70vh !important; */
     width: 95% !important;

@@ -111,7 +111,7 @@ const cechiaArc = [];
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
-const steps = 400;
+const steps = 100;
  
 // Draw an arc between the `origin` & `destination` of the two points
 for (let i = 0; i < lineDistance; i += lineDistance / steps) {
@@ -357,16 +357,19 @@ function animateCechia() {
 
 // read the link on how above code works
 var findMe = document.querySelectorAll('#map');
-
+let scrollCounter = 0;
 window.addEventListener('scroll', function(event) {
   // add event on scroll
   findMe.forEach(element => {
       //for each .thisisatest
       if (isInViewport(element)) {
+        if(!scrollCounter){
         //if in Viewport
          animate(0)
          animateCechia(0)
-        element.classList.add("draw");
+         element.classList.add("draw");
+        scrollCounter = 1
+        }
         
       } else {
         // element.classList.remove("draw");
