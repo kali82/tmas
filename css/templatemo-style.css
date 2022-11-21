@@ -11,6 +11,12 @@ https://templatemo.com/tm-513-avalon
     padding: 0;
     font-family: 'Open Sans', arial, sans-serif;
 }
+.mapboxgl-ctrl-bottom-right {
+	visibility: hidden;
+}
+.mapboxgl-ctrl-bottom-left {
+	visibility: hidden;
+}
 .zasiegi-text {
 	color: #999 !important;
 }
@@ -25,7 +31,7 @@ https://templatemo.com/tm-513-avalon
 	background-color: #333;
 	height: 70vh;
 	/* The height is 400 pixels */
-	width: 95%;
+	width: 100%;
 	pointer-events: none;
 	margin: auto;
 	/* The width is the width of the web page */

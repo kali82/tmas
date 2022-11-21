@@ -26,17 +26,17 @@
   }
   .employees2 {
     display: grid;
-    min-height: 700px;
+    min-height: 900px !important;
     align-content: center;
     /* height: 70vh !important; */
     width: 95% !important;
     margin: auto !important;
     margin-top: 10px !important;
     padding: 0 !important;  
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ), url(../img/pracownicy-back-1.jpeg) !important;
+    ), url(../img/pracownicy-back-1.jpeg) !important; */
     background-size: cover;
     background-clip: content-box;
 

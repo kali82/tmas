@@ -21,7 +21,7 @@ if (window.matchMedia('(max-width: 767px)').matches) {
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio,
         style: 'mapbox://styles/mapbox/dark-v10?optimize=true',
         center: [15, 48.8],
-        zoom: 4.5,
+        zoom: 4,
         pitch: 20,
         projection: 'globe',
         locale: 'pl-pl'
