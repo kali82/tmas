@@ -167,7 +167,7 @@
 
 
 // Initialize and add the map51.961104338425066, 15.544904171130122
-function initMap() {
+function contactMap() {
     // The location of Uluru
     const officeLocation = { lat: 51.961104338425066, lng: 15.544904171130122 };
     // The map, centered at Uluru

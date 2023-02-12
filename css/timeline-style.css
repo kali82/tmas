@@ -96,8 +96,8 @@ img {
   position: relative;
 }
 .ag-timeline_line {
-  width: 2px;
-  background-color: #393935;
+  width: 5px;
+  background-color: #1705EB;
 
   position: absolute;
   top: 2px;
@@ -116,7 +116,7 @@ img {
 .ag-timeline_line-progress {
   width: 100%;
   height: 20%;
-  background-color: #007cbf;
+  background-color: #72DE15;
 }
 
 .ag-timeline-card_box {
@@ -136,8 +136,8 @@ img {
   height: 50px;
   line-height: 50px;
   width: 50px;
-  border: 3px solid #007cbf;
-  background-color: #1d1d1b;
+  border: 3px solid #72DE15;
+  background-color: #1705EB;
 
   text-align: center;
   font-family: 'ESL Legend', sans-serif;
@@ -149,8 +149,8 @@ img {
   border-radius: 50%;
 }
 .js-ag-active .ag-timeline-card_point {
-  color: #1d1d1b;
-  background-color: #007cbf;
+  color: #FFF;
+  background-color: #72DE15; 
 }
 .ag-timeline-card_meta-box {
   display: inline-block;
@@ -167,9 +167,9 @@ img {
   display: inline-block;
   width: 45%;
   margin: -77px 0 0;
-  background-color: #282828;
+  background-color: #1705EB;
 
-  opacity: 0;
+   opacity: 0;
 
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -215,7 +215,7 @@ img {
   height: 18px;
   width: 18px;
   margin-top: 20px;
-  background-color: #282828;
+  background-color: #1705EB;
 
   z-index: -1;
   position: absolute;
@@ -251,7 +251,7 @@ img {
   font-family: 'ESL Legend', sans-serif;
   font-weight: bold;
   font-size: 28px;
-  color: #476C21;
+  color: #5eaaee;
 }
 .ag-timeline-card_desc {
   line-height: 1.45;

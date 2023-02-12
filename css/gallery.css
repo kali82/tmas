@@ -1,0 +1,46 @@
+body {
+  display: grid;
+  place-content: center;
+  background: #111;
+}
+.waterfall {
+  /* width: 80vw; */
+  margin: 10em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+  grid-auto-flow: row dense;
+  /* grid-auto-rows: 10vh; */
+}
+.waterfall .item:nth-of-type(3n+1) {
+  grid-row: auto / span 130vh / 10vh;
+}
+.waterfall .item:nth-of-type(3n+2) {
+  grid-row: auto / span 140vh / 10vh;
+}
+.waterfall .item:nth-of-type(3n+3) {
+  grid-row: auto / span 150vh / 10vh;
+}
+.waterfall .item {
+  overflow: hidden;
+  transform: rotate(-7.5deg);
+  filter: saturate(0) contrast(10) brightness(0.2);
+  transition: transform 0.2s, border 0.1s;
+  box-sizing: border-box;
+  border: 1em solid transparent;
+}
+.waterfall .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(15deg);
+  transition: all 0.3s;
+}
+.waterfall .item.inbound {
+  transform: rotate(0);
+  filter: none;
+  border-bottom: 1px solid white;
+}
+.waterfall .item.inbound img {
+  transform: rotate(0);
+}
