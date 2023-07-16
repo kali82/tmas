@@ -4,13 +4,13 @@
   .employees-title {
     text-align: center;
     font-size: xxx-large;
-    color: white;
+    /* color: white; */
     padding-bottom: 70px;
   }
   .employees-left-text{
     font-size: large;
     line-height: 40px;
-    color: white;
+    /* color: white; */
   }
   .employees-right-text{
     font-size: large;
