@@ -23,6 +23,64 @@ https://templatemo.com/tm-513-avalon
 	border: 1px solid black;
 	z-index: 10000;
 }
+@media screen and (max-width: 768px) {
+	.test-container {
+		flex-direction: column;
+	}
+
+	.list {
+		max-width: 100%;
+		border-right: none;
+		border-bottom: 1px solid #ccc;
+	}
+}
+.test-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.list {
+	flex: 1;
+	padding: 20px;
+	max-width: 300px;
+	border-right: 1px solid #ccc;
+}
+
+.list-item {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.details {
+	flex: 2;
+	padding: 20px;
+}
+
+.details img {
+	max-width: 100%;
+	height: 350px;
+}
+
+.image-repeter {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-image: url('../img/IMG_3422.JPG');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	background-position: center;
+	height: 45vh;
+	width: 100% !important;
+}
+.image-repeter-2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-image: url('../img/IMG_3523.JPG');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	background-position: center;
+	height: 45vh;
+	width: 100% !important;
+}
 .map-window {
 	/* display: inline-flex; */
 }
@@ -1675,7 +1733,7 @@ body {
 	flex-direction: column;
 	justify-content: left;
 	align-items: left;
-	top: 17vh;
+	top: 10vh;
 	left: 0;
 	right: 0;
 	padding: 0;
@@ -1700,7 +1758,7 @@ body {
 	font-weight: 700;
 	font-family: sans-serif;
 	display: block;
-	padding: 20px;
+	padding: 10px;
 	font-size: 2em
   }
   
