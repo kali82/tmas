@@ -42,13 +42,13 @@
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('siedzibaID')"><span class="arrow-menu-item">&#10551;</span>  Siedziba</a></li>
               <!-- </ul>   -->
             </li>
-            <li><a href="#">OFERTA</a>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')">OFERTA</a>
                 <li  class="subpage-menu"><a href="#"><span class="arrow-menu-item">&#10551;</span>  Transport</a></li>
                 <li  class="subpage-menu"><a href="#"><span class="arrow-menu-item">&#10551;</span>  Serwis Tir</a></li>
  
             </li>
-            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')">GALERIA</a></li>
-            <li><a href="#">KONTAKT</a></li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('galeriaID')">GALERIA</a></li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('contact-section')">KONTAKT</a></li>
           </ul>  
             <div id="nav-foot">
                 
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol" onclick="window.location.href='aboutUs.html'">
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('transportID');">
                 <div style="text-align: center;" class="aboutUs-info">
                     <h3>OFERTA</h3>
                 </div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-3 bootCols thirdCol" onclick="window.location.href='gallery.html'">
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols thirdCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('galeriaID');">
                 <div style="text-align: center;" class="aboutUs-info">
                     <h3>GALERIA</h3>
                 </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-3 bootCols fourCol">
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols fourCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('contact-section');">
                 <div style="text-align: center;" class="aboutUs-info">
                     <h3>KONTAKT</h3>
                 </div>
@@ -368,7 +368,7 @@
     </section>
     <div class="image-repeter">
     </div>
-    <div class="container mb-5 pb-lg-5">
+    <div class="container mb-5 pb-lg-5" id="pracownicyID">
         <div class="row">        
             <div class="col-12">
                 <h2 class="mb-3 employees-title" data-aos="fade-up">Pracownicy</h2>
@@ -396,7 +396,7 @@
         </div>
     </div>
     <div class="image-repeter-2"></div>
-    <section id="zasiegiID" class="map-window">
+    <section id="flotaID" class="map-window">
         <div class="map-container">
             <div class="map-content">
                 <div class="map-title">
@@ -441,7 +441,7 @@
     </section>
     <div class="image-repeter-3">
     </div>
-    <div class="container mb-5 pb-lg-5">
+    <div class="container mb-5 pb-lg-5" id="siedzibaID">
         <div class="row">        
             <div class="col-12">
                 <h2 class="mb-3 employees-title" data-aos="fade-up">Siedziba</h2>
@@ -457,7 +457,7 @@
         </div>
     </div>
     <div class="image-repeter-2"></div>
-    <div class="container mb-5 pb-lg-5">
+    <div class="container mb-5 pb-lg-5" id="transportID">
         <div class="row">        
             <div class="col-12">
                 <h2 class="mb-3 employees-title" data-aos="fade-up">Transport</h2>
@@ -498,17 +498,17 @@
             <div class="row" >
               <div class="col">
                 <div class="square-info" data-aos="fade-up" data-aos-delay="1500">
-                    30 lat <br> doświadczenia
+                    <span>30 lat</span> <br> doświadczenia
                 </div>      
               </div>
               <div class="col">
                 <div class="square-info" data-aos="fade-up" data-aos-delay="1600">
-                    Miliony <br> przejechanych <br> kilometrów
+                    <span>Miliony</span> <br> przejechanych <br> kilometrów
                 </div>    
               </div>
               <div class="col ">
                 <div class="square-info" data-aos="fade-up" data-aos-delay="1700">
-                    Diesiątki <br> zadowolonych <br> klientów
+                    <span>Dziesiątki</span> <br> zadowolonych <br> klientów
                 </div>    
               </div>
             </div>
@@ -520,7 +520,7 @@
 
     </div>
     <div class="image-repeter-3"></div>
-    <section class="galery-image">
+    <section class="galery-image" id="galeriaID">
         <div class="container mb-5 pb-lg-5">
             <div class="row">        
                 <div class="col-12">
@@ -580,74 +580,6 @@
         <li>
           <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814784/photostream-photos/DSC05517_ni2k0p.jpg" alt="Payam crossing the street on a bike" loading="lazy">
         </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05620_qfwycq.jpg" alt="Lit trees reflected in a puddle" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05462_b33uvp.jpg" alt="Moody chair in my hotel room" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05489_mqzktl.jpg" alt="Tom and Jenn wearing sunglasses" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05476_dlkjza.jpg" alt="Jordan and Sarah in front of a restaurant window" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814783/photostream-photos/DSC05497_abbd3c.jpg" alt="Sarah reading the Double Dragon drink menu" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05487_fcdv7t.jpg" alt="Beer brewing equipment" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05493_q6njbk.jpg" alt="2 cocktails in the making" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05446_xj60ff.jpg" alt="Beverage fridge at Nong's" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05559_hu49zx.jpg" alt="Wood structure reflections" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05482_dtrj02.jpg" alt="Colorful garden equipment in a shop window" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05565_dx5rp6.jpg" alt="Sarah in front of a wooden wall" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05613_o9af2z.jpg" alt="A neon banana" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05469_fdxdzx.jpg" alt="Matt Sacks smiling while we're waiting for food" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814782/photostream-photos/DSC05558_yq2tnz.jpg" alt="A fixed-gear bike under some bright lights" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05483_dyiuya.jpg" alt="Panic's PlayDate being held by a tester" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05468_xzbtcd.jpg" alt="Window reflection of me and Payam" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05457_nloycw.jpg" alt="Upside down shopping carts" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05522_mekpec.jpg" alt="Payam riding a bike with no hands" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05611_lbwtmk.jpg" alt="A kid's pillow left on the bench of a bus stop" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05572_xfvij7.jpg" alt="My reflection in the mirror" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05481_gnljae.jpg" alt="Jordan holding an iced coffee against his head to cool down" loading="lazy">
-        </li>
-        <li>
-          <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814781/photostream-photos/DSC05480_zkw8sm.jpg" alt="Jordan and Sarah looking at the menu in a coffee shop" loading="lazy">
-        </li>
-        <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
-        <li></li>
       </ul>
     </section>
     <section class="contact-us" id="contact-section">
