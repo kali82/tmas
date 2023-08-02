@@ -52,7 +52,7 @@
           </ul>  
             <div id="nav-foot">
                 
-                    <div class="col-3"><h5>Transport Miedzynarodowy Artur Siergiej</h5></div>
+                    <div class="col-6"><h5>Transport Miedzynarodowy Artur Siergiej</h5></div>
                     <div class="col-6"><h5>Zielona Góra</h5>+48 123 456 789</div>
                     <!-- <div class="col"><h5>NEWYORK</h5> (555) 257 0482</div>
                     <div class="col-6 nav-social">
@@ -131,19 +131,19 @@
         <div class="row mobileView">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3 bootCols firstCol upLeftCol"
-                    onclick="document.getElementById('xd').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                    onclick="document.getElementById('historiaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="about-info">
                         <h3>O NAS</h3>
                     </div>
                     <div style="text-align: center;" class="col-details">
                         <h3>O NAS</h3>
                         <div class="about-button"><img src="./arrow-232.png" alt=""
-                            onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                            onclick="document.getElementById('historiaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol upRightCol"
-                    onclick="window.location.href='aboutUs.html'">
+                onclick="document.getElementById('transportID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>OFERTA</h3>
                     </div>
@@ -156,7 +156,7 @@
             </div>
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-3 bootCols firstCol downLeftCol"
-                    onclick="window.location.href='gallery.html'">
+                onclick="document.getElementById('galeriaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>GALERIA</h3>
                     </div>
@@ -166,7 +166,8 @@
                         <button></button>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol downRightCol">
+                <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol downRightCol"
+                onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>KONTAKT</h3>
                     </div>
@@ -182,12 +183,6 @@
         </div>
 
     </div>
-    <!-- <div class="m ap-container">
-        <div id="map">
-
-        </div>
-    </div> -->
-
 
     <div id="historiaID" class="timeline-container">
         <div class="ag-timeline-block">
@@ -601,30 +596,30 @@
                             <div class="col-md-4">
                                 <fieldset>
                                     <input name="name" type="text" class="form-control" id="name"
-                                        placeholder="Your name..." required="">
+                                        placeholder="Imię..." required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-4">
                                 <fieldset>
                                     <input name="email" type="email" class="form-control" id="email"
-                                        placeholder="Your email..." required="">
+                                        placeholder="Adres E-mail..." required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-4">
                                 <fieldset>
                                     <input name="subject" type="text" class="form-control" id="subject"
-                                        placeholder="Subject..." required="">
+                                        placeholder="Temat..." required="">
                                 </fieldset>
                             </div>
                             <div class="col-md-12">
                                 <fieldset>
                                     <textarea name="message" rows="6" class="form-control" id="message"
-                                        placeholder="Your message..." required=""></textarea>
+                                        placeholder="Wiadomość..." required=""></textarea>
                                 </fieldset>
                             </div>
                             <div class="col-md-6">
                                 <fieldset>
-                                    <input class= "mailButton" type="button" value="Send Email" onclick="sendEmail()" />
+                                    <input class= "mailButton" type="button" value="Wyślij e-mail" onclick="sendEmail()" />
                                     <!-- <button type="submit" id="form-submit" class="btn" onclick="sendEmail()">Send it now</button> -->
                                 </fieldset>
                             </div>
@@ -763,17 +758,45 @@
             latitude: 55.062383,
             longitude: 24.678127
         },
+        //słowacja
+        {
+            latitude: 48.998929,
+            longitude: 21.669546
+        },
         //wegry
         {
             latitude: 46.488699,
             longitude: 17.203060
         },
+        //wlochy 45.519560, 9.996867
+        {
+            latitude: 45.519560,
+            longitude: 9.996867
+        },
+        //austria 47.356800, 14.913917
+        {
+            latitude: 47.356800,
+            longitude: 14.913917
+        },
+        //czechy
+        {
+            latitude: 49.719840790734615,
+            longitude: 14.738765121110976
+        },
+        //belgia 50.386930, 5.187238
+        {
+            latitude: 50.386930,
+            longitude: 5.187238
+        },
+        //holandia 52.311620, 5.704407
+        {
+            latitude: 52.311620,
+            longitude: 5.704407
+        },
+        //niemcy 51.671362, 11.379458
         {
             latitude: 50.716043395221334,
             longitude: 9.297722095222504
-        }, {
-            latitude: 49.719840790734615,
-            longitude: 14.738765121110976
         }
         ];
 
@@ -792,7 +815,15 @@
             let flags = {
                 1: "./customicondesign-flag2/png/Estonia64.png",
                 3: "./customicondesign-flag2/png/Lithuanian64.png",
-                2: "./customicondesign-flag2/png/Latvia64.png"
+                2: "./customicondesign-flag2/png/Latvia64.png",
+                4: "./customicondesign-flag2/png/Slovakia64.png",
+                5: "./customicondesign-flag2/png/Hungary64.png",
+                6: "./customicondesign-flag2/png/Italy64.png",
+                7: "./customicondesign-flag2/png/Austria64.png",
+                8: "./customicondesign-flag2/png/Czech64.png",
+                9: "./customicondesign-flag2/png/Belgium64.png",
+                10: "./customicondesign-flag2/png/Netherlands64.png",
+                11: "./customicondesign-flag2/png/Germany64.png",
             }
             //Iterate through all points in mapPoints
             $.each(mapPoints, function (key, value) {
