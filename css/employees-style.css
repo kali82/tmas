@@ -1,11 +1,14 @@
 *{
     font-family:Nunito, sans-serif;
   }
+   .title {
+    padding-bottom: 50px;
+  }
   .employees-title {
     text-align: center;
     font-size: xxx-large;
     /* color: white; */
-    padding-bottom: 70px;
+   /* padding-bottom: 70px; */
   }
   .employees-left-text{
     font-size: large;
