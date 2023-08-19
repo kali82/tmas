@@ -1339,8 +1339,8 @@ transition-delay: 0.3s;
   border-radius: 0px;
   padding-left: 15px;
   font-size: 13px;
-  color: black;
-  background-color: rgba(250, 250, 250, 0.2);
+  color: rgb(12, 11, 11);
+  background-color: rgba(250, 250, 250, 0.76);
   border-bottom: 2px solid #ffffff;
   outline: none;
   border-left: none;
@@ -1356,7 +1356,7 @@ transition-delay: 0.3s;
 	border-radius: 0px;
 	padding-left: 15px;
 	font-size: 13px;
-	color: black;
+	color: rgb(223, 217, 217);
 	background-color: rgba(23, 9, 223, 0.932);
   }
 
@@ -2239,4 +2239,121 @@ body {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+* {
+    font-family: 'Indie Flower', cursive;
+}
+
+#signUpForm * {
+  box-sizing: border-box;
+}
+#signUpForm {
+  display: inline-block;
+  background: #72DE15;
+  padding: 30px 30px 0;
+  width: 300px;
+  font-size: 18px;
+  position: fixed;
+  bottom: -500px;
+  right: 30px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 12px 12px 0 0;
+}
+#signUpForm .contact-button {
+  background: #1705EB;
+  border: 6px solid white;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 12px;
+  color: #f0e2e0;
+  position: relative;
+  margin: -54px auto 30px;
+  display: table;
+  font-weight: bold;
+  transition: .1s ease-in-out;
+}
+#signUpForm .contact-button:hover {
+  background: #1705EB;
+  color: #ffffff;
+  cursor: pointer;
+}
+#signUpForm form {
+  width: 100%;
+}
+#signUpForm input,
+#signUpForm textarea {
+  width: 100%;
+  margin: 4px 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  text-align: center;
+  background: #f0e2e0;
+  font-size: .85em;
+}
+.form-arrow {
+  font-size: 0.7em;
+  position: relative;
+  display: inline-block;
+  transform-origin: center;
+  vertical-align: middle;
+  top: -2px;
+  left: 10px;
+}
+#signUpForm input:focus,
+#signUpForm textarea:focus {
+  border: 1px solid #789400;
+  outline: none;
+}
+#signUpForm textarea {
+  height: 100px;
+}
+#signUpForm .wpcf7-submit {
+  background: #1705EB;
+  font-weight: 600;
+  color: #e2e2e2;
+  box-shadow: 0px 6px 30px rgba(158, 13, 13, 0.31);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 10px) {
+  #signUpForm {
+    padding: 10px 20px 0;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    display: table;
+    right: -277px;
+    top: 50%;
+    border-radius: 12px 12px 0;
+    box-shadow: none;
+    transform: scale(0.8);
+    transform-origin: right;
+  }
+  #signUpForm .contact-button {
+    position: absolute;
+    left: -15px;
+    top: 80px;
+    border-radius: 12px;
+    bottom: 0;
+    border: 5px solid white;
+    margin: auto 0;
+    transform-origin: left;
+    transform: rotateZ(-90deg);
+  }
+}
   

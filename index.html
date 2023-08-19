@@ -527,7 +527,7 @@
         </div>
 
     </div>
-    <div class="image-repeter-5"></div>
+    <!-- <div class="image-repeter-5"></div> -->
     <section class="galery-image" id="galeriaID">
         <div class="container mb-5 pb-lg-5">
             <div class="row">        
@@ -649,8 +649,38 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <!-- Please visit https://templatemo.com/contact page if you do not know how to setup the contact form -->
-
+                    <div id="signUpForm">
+                        <div role="form" class="wpcf7" id="wpcf7-f276-o1" dir="ltr">
+                          <div class="screen-reader-response"></div>
+                          <form action="/#wpcf7-f276-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <div style="display: none;">
+                              <input type="hidden" name="_wpcf7" value="276">
+                              <input type="hidden" name="_wpcf7_version" value="4.5.1">
+                              <input type="hidden" name="_wpcf7_locale" value="">
+                              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f276-o1">
+                              <input type="hidden" name="_wpnonce" value="3da6ca0018"></div>
+                      
+                            <!---------------------------------------------------------------->
+                            <!----------ADD THIS IN CONTACT FORM 7 ABOVE INPUTS/LABELS-------->
+                            <!---------------------------------------------------------------->
+                            <div class="contact-button">Napisz do nas <span class="form-arrow">&#9650;</span></div>
+                            <!----------------------------------------------------------------->
+                            <!----------------------------------------------------------------->
+                            <!----------------------------------------------------------------->
+                      
+                            <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Imię i Nazwisko"></span><br>
+                              <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span><br>
+                              <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Telefon (opcjonalnie)"></span><br>
+                              <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Wiadomość"></textarea></span></p>
+                            <div class="wpcf7-form-control-wrap">
+                              <div style="width: 304px; height: 78px;background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1636676/recaptcha.png');background-size:cover;background-position:center;visibility: hidden;">
+                              </div>
+                            </div>
+                            <p><input  value="Wyślij" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader"  alt="Sending ..." style="visibility: hidden;"></p>
+                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                          </form>
+                        </div>
+                      </div>  
                     <form id="contact" action="" method="post">
                         <div class="row">
                             <div class="col-md-4">
@@ -680,7 +710,6 @@
                             <div class="col-md-6">
                                 <fieldset>
                                     <input class= "mailButton" type="button" value="Wyślij e-mail" onclick="sendEmail()" />
-                                    <!-- <button type="submit" id="form-submit" class="btn" onclick="sendEmail()">Send it now</button> -->
                                 </fieldset>
                             </div>
                         </div>
@@ -715,14 +744,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script src="js/TweenMax.min.js"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
-
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
@@ -735,8 +764,67 @@
     <script src="js/parallax.min.js"></script>
     <!-- <script src="js/gMapInit.js"></script>  -->
     <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
-
-
+    <script>
+        $(function() {
+            
+    var hiddenFormBottom = $("#signUpForm").css("bottom");
+    var hiddenFormRight = $("#signUpForm").css("right");
+  
+    $(".contact-button").click(function() {
+      var screenWidth = $(window).width();
+      var formPosDesktop = $("#signUpForm").css("bottom");
+      var formPosMobile = $("#signUpForm").css("right");
+  
+    //   if (screenWidth >= 768 && formPosDesktop !== "0px") {
+    //     TweenMax.to("#signUpForm", 0.7, {
+    //       bottom: 0,
+    //       ease: Expo.easeOut
+    //     });
+    //     TweenMax.to(".form-arrow", 1, {
+    //       rotationZ: 180,
+    //       transformOrigin: "center",
+    //       ease: Expo.easeOut
+    //     });
+    //   } else if (screenWidth >= 768 && formPosDesktop == "0px") {
+    //     TweenMax.to("#signUpForm", 0.3, {
+    //       bottom: "-660px",
+    //       ease: Bounce.easeOut
+    //     });
+    //     TweenMax.to(".form-arrow", 0.7, {
+    //       rotationZ: 0,
+    //       transformOrigin: "center",
+    //       ease: Expo.easeOut
+    //     });
+    //   }
+  
+      if ( formPosMobile !== "0px") {
+        TweenMax.to("#signUpForm", 0.7, {
+          right: 0,
+          ease: Expo.easeOut
+        });
+        TweenMax.to(".form-arrow", 1, {
+          rotationZ: 180,
+          transformOrigin: "center",
+          ease: Expo.easeOut
+        });
+      } else if ( formPosMobile == "0px") {
+        TweenMax.to("#signUpForm", 0.3, {
+          right: -277,
+          ease: Bounce.easeOut
+        });
+        TweenMax.to(".form-arrow", 0.7, {
+          rotationZ: 0,
+          transformOrigin: "center",
+          ease: Expo.easeOut
+        });
+      }
+    });
+  });
+  
+  $(window).resize(function() {
+    $("#signUpForm, .form-arrow").attr("style", "");
+  });
+    </script>
     <script>
                 window.addEventListener('DOMContentLoaded', function() {
             const firstListItem = document.querySelector('.list-item');
@@ -1019,6 +1107,10 @@
 
 
     </script>
+    <script>
+        
+    </script>
+    
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  -->
