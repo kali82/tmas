@@ -21,21 +21,74 @@
     <link rel="stylesheet" href="css/employees-style.css">
     <link rel="stylesheet" href="css/aos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- <script>
+        var engButton = document.getElementById("engButton");
+        engButton.addEventListener('click', function(){
+            window.open("./")
+        })
 
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.scrollY === 0) {
+              var dynamicStyle = document.getElementById("dynamic-css");
+              if (!dynamicStyle) {
+                dynamicStyle = document.createElement("style");
+                dynamicStyle.id = "dynamic-css";
+                dynamicStyle.innerHTML = "html, body { margin: 0; overflow: hidden; }";
+                document.head.appendChild(dynamicStyle);
+              }
+            } else {              
+                var dynamicStyle = document.getElementById("dynamic-css");
+              if (dynamicStyle) {
+                dynamicStyle.parentNode.removeChild(dynamicStyle);
+              }
+            }
 
-
+          window.addEventListener("scroll", function() {
+            if (window.scrollY === 0) {
+            //   var dynamicStyle = document.getElementById("dynamic-css");
+            //   if (!dynamicStyle) {
+            //     dynamicStyle = document.createElement("style");
+            //     dynamicStyle.id = "dynamic-css";
+            //     dynamicStyle.innerHTML = "html, body { margin: 0; overflow: hidden; }";
+            //     document.head.appendChild(dynamicStyle);
+            //   }
+            } else {              
+                var dynamicStyle = document.getElementById("dynamic-css");
+              if (dynamicStyle) {
+                dynamicStyle.parentNode.removeChild(dynamicStyle);
+              }
+            }
+          });
+        });
+                                // Funkcja do tłumaczenia tekstu na angielski
+      function translateToEnglish(targetID) {
+        console.log("Tlumaczenie...");
+        var targetElement = document.getElementById(targetID);
+        if (targetElement) {
+          var englishText = targetElement.getAttribute('data-translate');
+          if (englishText) {
+            console.log(englishText);
+            targetElement.textContent = englishText;
+          }
+        }
+      }
+      </script>
 </head>
 
 <body>
     <header id="header-main">
         <a id="brandID" onclick="closeMenu(); scrollToTargetAdjusted('homepage')" class="brand">TMAS.PL</a>
+        <img class="logo" src="./img/eng.png" alt="logo" onclick="window.location.replace('./index.eng.html')">
+        <img class="logoPL" src="./img/plFlag.png" alt="logo" onclick="window.location.replace('./index.html')">
         <a href="#" id="burger"> <span></span> <span></span> <span></span> </a>
         
         <nav id="nav-main">    
           <ul>
-            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')">O NAS</a>
+            <li><a onclick="document.getElementById('burger').click(); xd(); scrollToTargetAdjusted('historiaID')">O NAS</a>
               <!-- <ul> -->
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span>  Nasza Historia</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span> Nasza Historia</a></li>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('zasiegiID')"><span class="arrow-menu-item">&#10551;</span>  Zasięgi Działalności</a></li>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item">&#10551;</span>  Pracownicy</a></li>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('flotaID')"><span class="arrow-menu-item">&#10551;</span>  Flota</a></li>
@@ -82,7 +135,7 @@
                 <div style="text-align: center;" class="col-details">
                     <h3>O NAS</h3>
                     <ul>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"><span class="arrow-menu-item-main">&#10551;</span>Nasza Historia</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"><span class="arrow-menu-item-main">&#10551;</span><span data-translate="Our History">Nasza Historia</span></li>
                         <li onclick="event.stopPropagation(); scrollToTargetAdjusted('zasiegiID');"><span class="arrow-menu-item-main">&#10551;</span>Zasięgi Działalności</li>
                         <li onclick="event.stopPropagation(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item-main">&#10551;</span>Pracownicy</li>
                         <li onclick="event.stopPropagation(); scrollToTargetAdjusted('flotaID');"><span class="arrow-menu-item-main">&#10551;</span>Flota</li>
@@ -130,7 +183,7 @@
         </div>
         <div class="row mobileView">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3 bootCols firstCol upLeftCol"
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols firstCol upLeftCol"
                     onclick="document.getElementById('historiaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="about-info">
                         <h3>O NAS</h3>
@@ -142,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol upRightCol"
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols secCol upRightCol"
                 onclick="document.getElementById('transportID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>OFERTA</h3>
@@ -155,7 +208,7 @@
 
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-3 bootCols firstCol downLeftCol"
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols firstCol downLeftCol"
                 onclick="document.getElementById('galeriaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>GALERIA</h3>
@@ -166,7 +219,7 @@
                         <button></button>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol downRightCol"
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols secCol downRightCol"
                 onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
                     <div style="text-align: center;" class="aboutUs-info">
                         <h3>KONTAKT</h3>
@@ -761,7 +814,7 @@
             </div>
         </div>
     </section>
-    </body>
+</body>
 
     <footer>
         <div class="container-fluid">
@@ -776,6 +829,7 @@
         </div>
     </footer>
 <!-- </section> -->
+
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -987,6 +1041,16 @@
         {
             latitude: 50.716043395221334,
             longitude: 9.297722095222504
+        },
+        // dania
+        {
+            latitude: 56.387166,
+            longitude: 9.616595
+        }, 
+        //szwecja
+        {
+            latitude: 58.011145,
+            longitude: 15.410467
         }
         ];
 
@@ -1014,6 +1078,8 @@
                 9: "./customicondesign-flag2/png/Belgium64.png",
                 10: "./customicondesign-flag2/png/Netherlands64.png",
                 11: "./customicondesign-flag2/png/Germany64.png",
+                12: "./customicondesign-flag2/png/Denmark64.png",
+                13: "./customicondesign-flag2/png/Sweden64.png",
             }
             //Iterate through all points in mapPoints
             $.each(mapPoints, function (key, value) {

@@ -145,7 +145,11 @@ https://templatemo.com/tm-513-avalon
 	margin: auto;
 	margin-right: 50%;
 }
+#serwisID img{
+	height: 550px;
+}
 .image-repeter {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/PRACOWNICY.JPG');
@@ -153,11 +157,12 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 50vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
 .image-repeter-2 {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/FLOTA.jpg');
@@ -165,11 +170,12 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 60vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
 .image-repeter-3 {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/Siedziba1.JPEG');
@@ -177,11 +183,12 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 50vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
 .image-repeter-4 {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/transport.JPG');
@@ -189,11 +196,12 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 50vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
 .image-repeter-5 {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/Siedziba1.JPEG');
@@ -201,11 +209,12 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 50vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
 .image-repeter-6 {
+	background-size: cover !important;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-image: url('../img/contact-back.JPEG');
@@ -213,7 +222,7 @@ https://templatemo.com/tm-513-avalon
     background-repeat: no-repeat;
 	background-position: center;
 	height: 50vh;
-	width: 90% !important;
+	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -263,7 +272,7 @@ https://templatemo.com/tm-513-avalon
 		
 	}
 	.bootCols{
-		height:45vh;
+		height:50vh;
 		width: 50%;
 		margin:0;
 		box-sizing:border-box;
@@ -309,17 +318,24 @@ https://templatemo.com/tm-513-avalon
 		border-top-right-radius: 20px;
 	}
   }
+  /* html, body {margin: 0;  overflow: hidden} */
   @media screen and (min-width: 900px) {
+	/* html, body {margin: 0;  overflow: hidden} */
+	/* body::-webkit-scrollbar{
+		display: none;
+		overflow: hidden;
+	  } */
 	.desktopView{
 		display: block;
+		overflow: hidden !important;
 	}
 	.bootCols{
-		height:95vh;
+		height:100vh;
 		margin:0;
 		box-sizing:border-box;
 		padding:5px;
 		color: white;
-	
+		overflow: hidden;
 	  }
 	.mobileView {
 		display: none;
@@ -337,10 +353,23 @@ https://templatemo.com/tm-513-avalon
 }
 .logo {
 	position: absolute;
-	width: 400px;
-	height: 100px;
-	top: 0;
-	left: 10;
+	width: 32px;
+	height: 32px;
+	top: 1px;
+	right: 5px;
+}
+.logo:hover {
+	border: 2px solid white;
+}
+.logoPL {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top: 28px;
+	right: 5px;
+}
+.logoPL:hover {
+	border: 2px solid white;
 }
 #map {
 	height: 70vh;
@@ -613,7 +642,7 @@ https://templatemo.com/tm-513-avalon
 
 body {
 	/* overflow-x: hidden; */
-	background-color: #fff;
+	background-color: #444;
 }
 
 ul {
@@ -1777,7 +1806,8 @@ body {
   
   .brand {
 	position: absolute;
-	left: 2em;
+	right: 2em;
+	top: 10%;
 	z-index: 6;
 	font-family: sans-serif;
 	text-transform: uppercase;
@@ -1801,8 +1831,8 @@ body {
   }
   #burger {
 	position: absolute;
-	top: 15px;
-	right: 40px;
+	top: 35%;
+	left: 40px;
 	height: 20px;
 	display: block;
 	width: 20px;
@@ -1869,7 +1899,8 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 350px;
+	min-width: 330px;
 	height: 100px;
 	z-index: 3;
 	transition: .4s;

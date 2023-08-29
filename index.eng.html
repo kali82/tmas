@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TMAS - Oficialna Strona</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/datepicker.css"> -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/timeline-style.css">
+    <link rel="stylesheet" href="css/employees-style.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.scrollY === 0) {
+              var dynamicStyle = document.getElementById("dynamic-css");
+              if (!dynamicStyle) {
+                dynamicStyle = document.createElement("style");
+                dynamicStyle.id = "dynamic-css";
+                dynamicStyle.innerHTML = "html, body { margin: 0; overflow: hidden; }";
+                document.head.appendChild(dynamicStyle);
+              }
+            } else {              
+                var dynamicStyle = document.getElementById("dynamic-css");
+              if (dynamicStyle) {
+                dynamicStyle.parentNode.removeChild(dynamicStyle);
+              }
+            }
+
+          window.addEventListener("scroll", function() {
+            if (window.scrollY === 0) {
+            //   var dynamicStyle = document.getElementById("dynamic-css");
+            //   if (!dynamicStyle) {
+            //     dynamicStyle = document.createElement("style");
+            //     dynamicStyle.id = "dynamic-css";
+            //     dynamicStyle.innerHTML = "html, body { margin: 0; overflow: hidden; }";
+            //     document.head.appendChild(dynamicStyle);
+            //   }
+            } else {              
+                var dynamicStyle = document.getElementById("dynamic-css");
+              if (dynamicStyle) {
+                dynamicStyle.parentNode.removeChild(dynamicStyle);
+              }
+            }
+          });
+        });
+                                // Funkcja do tłumaczenia tekstu na angielski
+      function translateToEnglish(targetID) {
+        console.log("Tlumaczenie...");
+        var targetElement = document.getElementById(targetID);
+        if (targetElement) {
+          var englishText = targetElement.getAttribute('data-translate');
+          if (englishText) {
+            console.log(englishText);
+            targetElement.textContent = englishText;
+          }
+        }
+      }
+      </script>
+</head>
+
+<body>
+    <header id="header-main">
+        <a id="brandID" onclick="closeMenu(); scrollToTargetAdjusted('homepage')" class="brand">TMAS.PL</a>
+        <img class="logo" src="./img/eng.png" alt="logo" onclick="window.location.replace('./index.eng.html')">
+        <img class="logoPL" src="./img/plFlag.png" alt="logo" onclick="window.location.replace('./index.html')">
+        <a href="#" id="burger"> <span></span> <span></span> <span></span> </a>
+        
+        <nav id="nav-main">    
+          <ul>
+            <li><a onclick="document.getElementById('burger').click(); xd(); scrollToTargetAdjusted('historiaID')">ABOUT US</a>
+              <!-- <ul> -->
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span> OUR HISTORY</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('zasiegiID')"><span class="arrow-menu-item">&#10551;</span>  ACTIVITY RANGE</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item">&#10551;</span>  WORKERS</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('flotaID')"><span class="arrow-menu-item">&#10551;</span>  OUR FLEET </a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('siedzibaID')"><span class="arrow-menu-item">&#10551;</span>  COMPANY HEADQUARTERS</a></li>
+              <!-- </ul>   -->
+            </li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')">OFFER</a>
+                <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')"><span class="arrow-menu-item">&#10551;</span>  Transport</a></li>
+                <li  class="subpage-menu"><a href="#"><span class="arrow-menu-item">&#10551;</span>  TRUCK SERVICE</a></li>
+ 
+            </li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('galeriaID')">GALLERY</a></li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('contact-section')">CONTACT</a></li>
+          </ul>  
+            <div id="nav-foot">
+                
+                    <div class="col-6"><h5>Transport Międzynarodowy Artur Siergiej</h5></div>
+                    <div class="col-6"><h5>Zielona Góra</h5>+48 601 740 147</div>
+            </div>
+        </nav>
+        </header>
+
+    <div id="homepage" class="container-fluid homepage-backround">
+        <div class="row desktopView">
+
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols firstCol"
+            onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"
+                >
+                <div style="text-align: center;" class="about-info">
+                    <h3>ABOUT US</h3>
+                </div>
+                <div style="text-align: center;" class="col-details">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"><span class="arrow-menu-item-main">&#10551;</span><span data-translate="Our History">Our History</span></li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('zasiegiID');"><span class="arrow-menu-item-main">&#10551;</span>Activity Range</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item-main">&#10551;</span>Workers</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('flotaID');"><span class="arrow-menu-item-main">&#10551;</span>Our Fleet</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('siedzibaID');"><span class="arrow-menu-item-main">&#10551;</span>Company Headquarters</li>
+                    </ul>
+                    <div class="about-button"> <img src="./arrow-232.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols secCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('transportID');">
+                <div style="text-align: center;" class="aboutUs-info">
+                    <h3>OFFER</h3>
+                </div>
+                <div style="text-align: center;" class="col-details">
+                    <h3>OFFER</h3>
+                    <ul>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('transportID');"><span class="arrow-menu-item-main">&#10551;</span> Transport</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('serwisID');"><span class="arrow-menu-item-main">&#10551;</span> Truck Service</li>
+                    </ul>
+                    <div class="about-button"> <img src="./arrow-232.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols thirdCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('galeriaID');">
+                <div style="text-align: center;" class="aboutUs-info">
+                    <h3>GALLERY</h3>
+                </div>
+                <div style="text-align: center;" class="col-details">
+                    <h3>GALLERY</h3>
+                    <!-- <p style="color: black;">subdetails for this column</p> -->
+                    <div class="about-button"> <img src="./arrow-232.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 bootCols fourCol" onclick="event.stopPropagation(); scrollToTargetAdjusted('contact-section');">
+                <div style="text-align: center;" class="aboutUs-info">
+                    <h3>CONTACT</h3>
+                </div>
+                <div style="text-align: center;" class="col-details">
+                    <h3>CONTACT</h3>
+                    <!-- <p style="color: white;">subdetails for this column</p> -->
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="row mobileView">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols firstCol upLeftCol"
+                    onclick="document.getElementById('historiaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                    <div style="text-align: center;" class="about-info">
+                        <h3>ABOUT US</h3>
+                    </div>
+                    <div style="text-align: center;" class="col-details">
+                        <h3>ABOUT US</h3>
+                        <div class="about-button"><img src="./arrow-232.png" alt=""
+                            onclick="document.getElementById('historiaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols secCol upRightCol"
+                onclick="document.getElementById('transportID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                    <div style="text-align: center;" class="aboutUs-info">
+                        <h3>OFFER</h3>
+                    </div>
+                    <div style="text-align: center;" class="col-details">
+                        <h3>OFFER</h3>
+                        <button></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols firstCol downLeftCol"
+                onclick="document.getElementById('galeriaID').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                    <div style="text-align: center;" class="aboutUs-info">
+                        <h3>GALLERY</h3>
+                    </div>
+                    <div style="text-align: center;" class="col-details">
+                        <h3>GALLERY</h3>
+                        <!-- <p style="color: white;">subdetails for this column</p> -->
+                        <button></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 bootCols secCol downRightCol"
+                onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});">
+                    <div style="text-align: center;" class="aboutUs-info">
+                        <h3>CONTACT</h3>
+                    </div>
+                    <div style="text-align: center;" class="col-details">
+                        <h3>CONTACT</h3>
+                        <!-- <p style="color: white;">subdetails for this column</p> -->
+                        <button></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="historiaID" class="timeline-container">
+        <div class="ag-timeline-block">
+            <div class="ag-timeline_title-box title">
+                <div class="ag-timeline_tagline">Nasza Historia</div>
+                <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                <!-- <div class="ag-timeline_title">No Flex</div> -->
+            </div>
+            <section class="ag-section">
+                <div class="ag-format-container">
+                    <div class="js-timeline ag-timeline">
+                        <div class="js-timeline_line ag-timeline_line">
+                            <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                        </div>
+                        <div class="ag-timeline_list">
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">1993</div>
+                                    </div>
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">1993</div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="./img/1993.jpeg" class="ag-timeline-card_img" width="640"
+                                                height="360" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">1993</div>
+                                            <div class="ag-timeline-card_desc">
+                                                W 1992 roku padł pierwszy pomysł założenia firmy transportowej. Po
+                                                zrobieniu
+                                                krótkiego rozeznania, w 1993 roku na celownik padło piękne pięcioletnie
+                                                Volvo f12,
+                                                po które jechaliśmy aż do Szwecji, a także plandeka wypatrzona w
+                                                Hamburgu.
+                                                Zdecydowaliśmy się rozpocząć pracę i zatrudnić kierowcę, który niedługo
+                                                później miał
+                                                prowadzić nasze nowe nabytki. Udało się też wynająć niewielki plac na
+                                                obrzeżach
+                                                Zielonej Góry, który na kolejne 6 lat stał się naszą siedzibą.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">1995</div>
+                                    </div>
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">1995</div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="./img/1995.jpeg" class="ag-timeline-card_img" width="640"
+                                                height="360" alt="" />
+
+                                        </div>
+
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">1995</div>
+                                            <div class="ag-timeline-card_desc">
+                                                W 1995 roku całkowity przypadek zasądził o kupieniu cysterny i wejściu
+                                                na rynek
+                                                płynnej chemii ósmej klasy ADR. Od tego czasu całkowicie się temu
+                                                poświęciliśmy i
+
+                                                tkwimy w tym aż do dnia dzisiejszego.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">1999</div>
+                                    </div>
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">1999</div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="./img/1999.jpeg" class="ag-timeline-card_img" width="640"
+                                                height="360" alt="" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">1999</div>
+                                            <div class="ag-timeline-card_desc">
+                                                Po kilku latach padła decyzja o zaprzestaniu wynajmowania placu i kupnie
+                                                działki.
+                                                Postawiliśmy własną halę z dwoma kanałami do napraw i niewielki biurowy
+                                                budynek.
+                                                Miejsce to, stało się naszym domem na kolejne kilkanaście lat.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">2021</div>
+                                    </div>
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">2021</div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="./img/2021.jpeg" class="ag-timeline-card_img" width="640"
+                                                height="360" alt="" />
+                                        </div>
+                                        <div class="ag-timeline-card_info">
+                                            <div class="ag-timeline-card_title">2021</div>
+                                            <div class="ag-timeline-card_desc">
+                                                Wraz z rozwojem firmy, zatrudnianiem większej ilości pracowników i
+                                                zwiększaniem
+                                                floty, niezbędnym stało się zmienienie siedziby. Teraz dysponujemy
+                                                nowoczesnym,
+                                                dużym budynkiem, który zapewnia nam nieporównywalnie wyższy komfort
+                                                pracy.
+                                                Przeprowadzka była dla nas jednym z większych kroków milowych.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section id="zasiegiID" class="map-window">
+        <div class="map-container">
+            <div class="map-content">
+                <div class="map-title title">
+                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Zasięgi Działalności</div>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+                <div class="map-text">
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px;"
+                        class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
+                        Obsługujemy klientów z terenu całej Unii Europejskiej.
+                        Przede wszystkim jeździmy po terenach: Niemiec,
+                        Czech, Słowacji,
+                        Węgier, Litwy, Łotwy, Estonii, a także Austrii, Holandii, Belgii i Włoch.
+
+                        Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno krajowym, jak i
+                        międzynarodowym,
+                        świadczymy w pełni profesjonalne usługi, zdobywając uznanie i zaufanie klientów z całej Europy.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <!-- <div class="overlay">
+            <button id="replay">Replay</button>
+        </div> -->
+        </div>
+    </section>
+    <div class="image-repeter">
+    </div>
+    <div class="container mb-5 pb-lg-5" id="pracownicyID">
+        <div class="row">        
+            <div class="col-12 title">
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Pracownicy</h2>
+                <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+            </div>
+            
+            <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                <p class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="300">Nasi pracownicy to grono
+                    zaufanych i doświadczonych ludzi. Wszyscy dysponują zaświadczeniem
+                    ADR, stale przechodzą odpowiednie szkolenia i zdają egzaminy.
+                    Dokładamy wszelkich starań, by stale podwyższać ich kompetencje.
+                    Ponadto specyfika i charakter przewożonych produktów wymagają stałego nadzoru doradcy do
+                    spraw bezpieczeństwa przy przewozie towarów niebezpiecznych. W naszym gronie mamy do
+                    dyspozycji taką osobę, dzięki czemu w każdej chwili możemy zasięgnąć opinii specjalisty.</p>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Nasz zespół wyróżnia się
+                    przede wszystkim zaangażowaniem. To grupa ludzi zdolna do poświęceń,
+                    wyrzeczeń i ciężkiej pracy. Dzięki ich fachowości możemy świadczyć usługi na wysokim poziomie
+                    już
+                    od prawie 30 lat.
+                    Oni stanowią największą siłę firmy.
+                    Im zawdzięczamy nasz sukces.</p>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="image-repeter-2"></div>
+    <section id="flotaID" class="map-window">
+        <div class="map-container">
+            <div class="map-content">
+                <div class="map-title title">
+                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Flota</div>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+                <div class="map-text">
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large;"
+                        class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
+                        Do dyspozycji mamy 20 ciągników marki Volvo oraz DAF spełniających normę EURO 6 oraz 21 cystern producentów Cocol, VanHool, GOFA, Feldbinder, Hendricks.
+
+                    </p>
+                </div>
+                <div class="test-container" data-aos="fade-up" data-aos-delay="700">
+                    <div class="list" id="list">
+                        <h3>Wielokomorowe</h3>
+                        <div class="list-item" onclick="showDetails('4 komory stalowe o pojemności 10-7,5-10-7,5', './img/4komory.PNG', '', './img/4komoryWew.PNG')">4-komorowa 🡪</div>
+                        <div class="list-item" onclick="showDetails('Wszystkie komory gumowane, pojemności komór: 11,5-22,5-11,5', './img/gumowana.PNG', '', './img/gumowanaWew.PNG')">3-komorowa gumowana 🡪</div>
+                        <div class="list-item" onclick="showDetails(' dwie zewnętrzne stalowe 9,5 + środkowa gumowana 21,5', './img/3komory2.PNG', '','./img/3komory2Wew.PNG')">3-komorowa 🡪</div>
+                        <div class="list-item" onclick="showDetails('zewnętrzne gumowane 11 + środkowa stalowa 22,5 ', './img/3komory.PNG', '','./img/3komoryWew.PNG')">3-komorowa 🡪</div>            
+                        <h3>Jednokomorowe</h3>
+                        <div class="list-item" onclick="showDetails('O pojemności od 21500 do 26000', './img/1komora.PNG', '', './img/1komoraWew.PNG')">cysterna gumowana 🡪 </div>
+                        <!-- Dodaj więcej elementów jednokomorowych, jeśli jest to potrzebne -->
+                    </div>
+                    <div class="details" id="details">
+                        <h2 id="details-title">Kliknij na element listy po lewej, aby zobaczyć szczegóły.</h2>
+                        <div id="details-image">
+                            <!-- Zdjęcie zostanie tutaj wyświetlone po kliknięciu na element listy -->
+                        </div>
+                        <p id="details-description">Opis zostanie tutaj wyświetlony po kliknięciu na element listy.</p>
+                    </div>
+                </div>
+                <div class="map-text">
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large;"
+                        class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
+                        W celu zapewnienia usług na najwyższym poziomie w każdym z aut zamontowany jest system GPS. Umożliwia on monitorowanie floty w czasie rzeczywistym i podaje lokalizację z kompleksowymi danymi. Przesyła także informacje z tachografu cyfrowego, co znacząco wpływa na dalsze planowanie pracy i bezpieczeństwo na drodze. Dzięki takim rozwiązaniom, mamy też sposobność transportować towary objęte systemem SENT.
+                        Nasza flota jest na bieżąco odmładzana, a grupa zaufanych mechaników czuwa nad utrzymaniem jej w dobrej kondycji. Dzięki temu, możemy zapewnić, że nasz sprzęt jest zawsze gotowy do pracy i spełnia wszelkie normy niezbędne do przewożenia tak wymagających ładunków. 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="image-repeter-3">
+    </div>
+    <div class="container mb-5 pb-lg-5" id="siedzibaID">
+        <div class="row">        
+            <div class="col-12 title">
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Siedziba</h2>
+                <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+            </div>
+            <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                    <img class="me-4 employees-left-text" style="max-height: 500px;" data-aos="fade-up" data-aos-delay="300" src="./img/Siedziba2.JPEG" alt="">
+            </div>
+
+            <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Siedziba firmy mieści się na terenie Strefy Aktywności Gospodarczej w Zielonej Górze. Mamy do dyspozycji nowoczesny budynek wraz z całodobowo monitorowanym placem. Do własnego użytku mamy również stację paliw oraz myjnię samochodów ciężarowych wyposażoną w głowicę umożliwiającą mycie cystern wewnątrz. Na terenie obiektu mieści się też dwustanowiskowy warsztat.</p>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="image-repeter-4"></div>
+    <div class="container mb-5 pb-lg-5" id="transportID">
+        <div class="row">        
+            <div class="col-12 title">
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Transport</h2>
+                <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+            </div>
+            <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Specjalizujemy się w przewozach wąskiej grupy materiałów niebezpiecznych klasy 8 ADR.<br>Towar stanowi płynna chemia, w tym: </p>
+                <ul>
+                    <li>&#10551; UN 1789 – kwas chlorowodorowy (kwas solny)</li>
+                    <li>&#10551; UN 1778 – kwas fluorokrzemowy</li>
+                    <li>&#10551; UN 1791 – podchloryn</li>
+                    <li>&#10551; UN 1805 – kwas fosforowy</li>
+                    <li>&#10551; UN 1814 – wodorotlenek potasu</li>
+                    <li>&#10551; UN 1819 – glinian sodu</li>
+                    <li>&#10551; UN 1824 – wodorotlenek sodu</li>
+                    <li>&#10551; UN 1830 – kwas siarkowy</li>
+                    <li>&#10551; UN 1840 – chlorek cynku</li>
+                    <li>&#10551; UN 2581 – chlorek glinu</li>
+                    <li>&#10551; UN 2582 – chlorek żelaza</li>
+                    <li>&#10551; UN 3264 – materiały żrące ciekłe kwaśne nieorganiczne i.n.o. - w tym odpady</li>
+                  </ul>
+            </div>
+
+            <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr.png" alt="">
+            </div>
+            <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2.jpg" alt="">  
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100"> Nasza firma figuruje w bazie danych o produktach i opakowaniach oraz o gospodarce odpadami (BDO) pod indywidualnym numerem rejestrowym 000008710. </p>
+  
+            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Wszystkie nasze ładunki są ubezpieczone w ramach odpowiedzialności cywilnej przewoźnika OCP.</p>
+        </div>
+
+        <div class="container">
+            <div class="row" >
+              <div class="col">
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1500">
+                    <span>30 lat</span> <br> doświadczenia
+                </div>      
+              </div>
+              <div class="col">
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1600">
+                    <span>Miliony</span> <br> przejechanych <br> kilometrów
+                </div>    
+              </div>
+              <div class="col ">
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1700">
+                    <span>Dziesiątki</span> <br> zadowolonych <br> klientów
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <p style="margin-left: 70px; margin-right: 70px;" class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.</p>
+        </div>
+
+    </div>
+    <div class="image-repeter-5"></div>
+    <div class="container mb-5 pb-lg-5" id="serwisID">
+        <div class="row">        
+            <div class="col-12 title">
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Serwis Tir</h2>
+                <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+            </div>
+            <div style="font-size: 20px;" class="col-lg-6 col-12 mt-3 mb-lg-5">
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Świadczymy kompleksowe usługi w zakresie: </p>
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="600">&#10551; mechaniki ogólnej</li>
+                    <li data-aos="fade-up" data-aos-delay="700">&#10551; komputerowej diagnostyki samochodów ciężarowych, naczep, przyczep</li>
+                    <li data-aos="fade-up" data-aos-delay="800">&#10551; naprawy silników</li>
+                    <li data-aos="fade-up" data-aos-delay="900">&#10551; naprawy skrzyń biegów</li>
+                    <li data-aos="fade-up" data-aos-delay="1000">&#10551; naprawy mostów</li>
+                    <li data-aos="fade-up" data-aos-delay="1100">&#10551; układów wydechowych</li>
+                    <li data-aos="fade-up" data-aos-delay="1200">&#10551; układów AdBlue</li>
+                    <li data-aos="fade-up" data-aos-delay="1300">&#10551; układów hamulcowych</li>
+                    <li data-aos="fade-up" data-aos-delay="1400">&#10551; układów zasilania</li>
+                    <li data-aos="fade-up" data-aos-delay="1500">&#10551; układów klimatyzacji</li>
+                    <li data-aos="fade-up" data-aos-delay="1600">&#10551; diagnostyki i naprawy instalacji ogrzewania</li>
+                    <li data-aos="fade-up" data-aos-delay="1700">&#10551; serwisu olejowego</li>
+                    <li data-aos="fade-up" data-aos-delay="1800">&#10551; serwisu opon i wulkanizacji</li>
+                    <li data-aos="fade-up" data-aos-delay="1900">&#10551; ozonowanie kabin</li>
+                  </ul>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5">
+                <img class="me-4 employees-left-text" style="width: 600px;" data-aos="fade-up" data-aos-delay="1000" src="./img//serwis.JPG" alt="">
+            </div>
+            <!-- <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2.jpg" alt="">  
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="image-repeter-5"></div> -->
+    <section class="galery-image" id="galeriaID">
+        <div class="container mb-5 pb-lg-5">
+            <div class="row">        
+                <div class="col-12 title">
+                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Galeria</h2>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+            </div>
+        </div>
+    <ul>
+        <li>
+          <img src="./img/gallery/1.jpg" alt="A Toyota Previa covered in graffiti" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/2.JPEG" alt="Interesting living room light through a window" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/3.JPEG" alt="Sara on a red bike" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/4.JPEG" alt="XOXO venue in between talks" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/5.jpg" alt="Trees lit by green light during dusk" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/6.jpg" alt="Portrait of Justin Pervorse" loading="lazy">
+        </li>
+        <li>
+          <img src="./img/gallery/7.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+        </li>
+        <li>
+            <img src="./img/gallery/8.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/9.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/10.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/11.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/12.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/13.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/14.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/16.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/17.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/18.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/19.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/20.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/21.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/22.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/23.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/24.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/25.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/26.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/27.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/28.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/29.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/30.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/31.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+          <li>
+            <img src="./img/gallery/15.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          </li>
+      </ul>
+    </section>
+    <!-- <div class="image-repeter-6"></div> -->
+    <section class="contact-us" id="contact-section">
+        <div class="container mb-1 pb-lg-1">
+            <div class="row">        
+                <div class="col-12 title">
+                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Kontakt</h2>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <div id="signUpForm">
+                        <div role="form" class="wpcf7" id="wpcf7-f276-o1" dir="ltr">
+                          <div class="screen-reader-response"></div>
+                          <form action="/#wpcf7-f276-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <div style="display: none;">
+                              <input type="hidden" name="_wpcf7" value="276">
+                              <input type="hidden" name="_wpcf7_version" value="4.5.1">
+                              <input type="hidden" name="_wpcf7_locale" value="">
+                              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f276-o1">
+                              <input type="hidden" name="_wpnonce" value="3da6ca0018"></div>
+                      
+                            <!---------------------------------------------------------------->
+                            <!----------ADD THIS IN CONTACT FORM 7 ABOVE INPUTS/LABELS-------->
+                            <!---------------------------------------------------------------->
+                            <div class="contact-button">Napisz do nas <span class="form-arrow">&#9650;</span></div>
+                            <!----------------------------------------------------------------->
+                            <!----------------------------------------------------------------->
+                            <!----------------------------------------------------------------->
+                      
+                            <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Imię i Nazwisko"></span><br>
+                              <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span><br>
+                              <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Telefon (opcjonalnie)"></span><br>
+                              <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Wiadomość"></textarea></span></p>
+                            <div class="wpcf7-form-control-wrap">
+                              <div style="width: 304px; height: 78px;background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1636676/recaptcha.png');background-size:cover;background-position:center;visibility: hidden;">
+                              </div>
+                            </div>
+                            <p><input  value="Wyślij" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader"  alt="Sending ..." style="visibility: hidden;"></p>
+                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                          </form>
+                        </div>
+                      </div>  
+                    <form id="contact" action="" method="post">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name"
+                                        placeholder="Imię..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email"
+                                        placeholder="Adres E-mail..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset>
+                                    <input name="subject" type="text" class="form-control" id="subject"
+                                        placeholder="Temat..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message"
+                                        placeholder="Wiadomość..." required=""></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input class= "mailButton" type="button" value="Wyślij e-mail" onclick="sendEmail()" />
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+
+                    <div id="contact-map" class="contact-right-content">
+                        <div class="icon"><img src="img/map-marker-icon.png" alt=""></div>
+                        <h4>You can find us on maps</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Copyright &copy; 2022 KALISZ COMPANY xD
+
+                        - <a rel="nofollow" href="https://kali82.github.io/portfolio/" target="_parent">TMAS</a>
+                        by <a rel="nofollow" href="https://kali82.github.io/portfolio/" target="_parent">Kalisz</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- </section> -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/initMap.js"></script>
+    <!-- <script src="js/mapInit.js"></script> -->
+    <script src="js/timeline.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <!-- <script src="js/gMapInit.js"></script>  -->
+    <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
+    <script>
+        $(function() {
+            
+    var hiddenFormBottom = $("#signUpForm").css("bottom");
+    var hiddenFormRight = $("#signUpForm").css("right");
+  
+    $(".contact-button").click(function() {
+      var screenWidth = $(window).width();
+      var formPosDesktop = $("#signUpForm").css("bottom");
+      var formPosMobile = $("#signUpForm").css("right");
+  
+    //   if (screenWidth >= 768 && formPosDesktop !== "0px") {
+    //     TweenMax.to("#signUpForm", 0.7, {
+    //       bottom: 0,
+    //       ease: Expo.easeOut
+    //     });
+    //     TweenMax.to(".form-arrow", 1, {
+    //       rotationZ: 180,
+    //       transformOrigin: "center",
+    //       ease: Expo.easeOut
+    //     });
+    //   } else if (screenWidth >= 768 && formPosDesktop == "0px") {
+    //     TweenMax.to("#signUpForm", 0.3, {
+    //       bottom: "-660px",
+    //       ease: Bounce.easeOut
+    //     });
+    //     TweenMax.to(".form-arrow", 0.7, {
+    //       rotationZ: 0,
+    //       transformOrigin: "center",
+    //       ease: Expo.easeOut
+    //     });
+    //   }
+  
+      if ( formPosMobile !== "0px") {
+        TweenMax.to("#signUpForm", 0.7, {
+          right: 0,
+          ease: Expo.easeOut
+        });
+        TweenMax.to(".form-arrow", 1, {
+          rotationZ: 180,
+          transformOrigin: "center",
+          ease: Expo.easeOut
+        });
+      } else if ( formPosMobile == "0px") {
+        TweenMax.to("#signUpForm", 0.3, {
+          right: -277,
+          ease: Bounce.easeOut
+        });
+        TweenMax.to(".form-arrow", 0.7, {
+          rotationZ: 0,
+          transformOrigin: "center",
+          ease: Expo.easeOut
+        });
+      }
+    });
+  });
+  
+  $(window).resize(function() {
+    $("#signUpForm, .form-arrow").attr("style", "");
+  });
+    </script>
+    <script>
+                window.addEventListener('DOMContentLoaded', function() {
+            const firstListItem = document.querySelector('.list-item');
+            if (firstListItem) {
+                firstListItem.click(); // Symulujemy kliknięcie na pierwszy element listy
+            }
+        });
+        function hover(imgSourceHover, element) {
+            element.setAttribute('src', imgSourceHover);
+        }
+        function unhover(imgSource, element) {
+            element.setAttribute('src', imgSource);
+        }
+        function showDetails(title, imageSrc, description, imgHoverSrc) {
+            document.getElementById('details-title').textContent = title;
+            document.getElementById('details-image').innerHTML = '<img src="' + imageSrc + '" onmouseover="hover(\'' + imgHoverSrc + '\', this);" onmouseout="unhover(\'' + imageSrc + '\', this);" alt="' + title + '">';
+            document.getElementById('details-description').textContent = description;
+        }
+        
+    </script>
+    <!-- <script async
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9l4TX6nK0uq5fPL-WAH_syx6a2uVGtUY&callback=initialize">
+</script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9l4TX6nK0uq5fPL-WAH_syx6a2uVGtUY"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9l4TX6nK0uq5fPL-WAH_syx6a2uVGtUY&callback=contactMap">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // navigation click actions 
+            $('.scroll-link').on('click', function (event) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            });
+            // scroll to top action
+            $('.scroll-top').on('click', function (event) {
+                event.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+            });
+            // mobile nav toggle
+            $('#nav-toggle').on('click', function (event) {
+                event.preventDefault();
+                $('#main-nav').toggleClass("open");
+            });
+        });
+        // scroll function
+        function scrollToID(id, speed) {
+            var offSet = 0;
+            var targetOffset = $(id).offset().top - offSet;
+            var mainNav = $('#main-nav');
+            $('html,body').animate({ scrollTop: targetOffset }, speed);
+            if (mainNav.hasClass("open")) {
+                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                mainNav.removeClass("open");
+            }
+        }
+        if (typeof console === "undefined") {
+            console = {
+                log: function () { }
+            };
+        }
+    </script>
+
+    <script>
+        //Variables
+        var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint, progress;
+
+        //Settings
+        var stepSize = 200; //Size of every animation increment
+        var stepTime = 0.1;   //Decrease to speed up
+
+
+        //This array holds all the points that polylines will animated from/to
+        var mapPoints = [{
+            latitude: 52.237049,
+            longitude: 21.017532
+        }, {
+            latitude: 59.048069,
+            longitude: 23.936792
+        }, {
+            latitude: 56.62271,
+            longitude: 23.456996
+        }, {
+            latitude: 55.062383,
+            longitude: 24.678127
+        },
+        //słowacja
+        {
+            latitude: 48.998929,
+            longitude: 21.669546
+        },
+        //wegry
+        {
+            latitude: 46.488699,
+            longitude: 17.203060
+        },
+        //wlochy 45.519560, 9.996867
+        {
+            latitude: 45.519560,
+            longitude: 9.996867
+        },
+        //austria 47.356800, 14.913917
+        {
+            latitude: 47.356800,
+            longitude: 14.913917
+        },
+        //czechy
+        {
+            latitude: 49.719840790734615,
+            longitude: 14.738765121110976
+        },
+        //belgia 50.386930, 5.187238
+        {
+            latitude: 50.386930,
+            longitude: 5.187238
+        },
+        //holandia 52.311620, 5.704407
+        {
+            latitude: 52.311620,
+            longitude: 5.704407
+        },
+        //niemcy 51.671362, 11.379458
+        {
+            latitude: 50.716043395221334,
+            longitude: 9.297722095222504
+        },
+        // dania
+        {
+            latitude: 56.387166,
+            longitude: 9.616595
+        }, 
+        //szwecja
+        {
+            latitude: 58.011145,
+            longitude: 15.410467
+        }
+        ];
+
+        //Google map settings
+        var mapOptions = {
+            zoom: 15,
+            center: new google.maps.LatLng(mapPoints[mapPoints.length - 2].latitude, mapPoints[mapPoints.length - 2].longitude)
+        };
+
+
+        function initializeMap() {
+
+            //Create map
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            bounds = new google.maps.LatLngBounds();
+            let flags = {
+                1: "./customicondesign-flag2/png/Estonia64.png",
+                3: "./customicondesign-flag2/png/Lithuanian64.png",
+                2: "./customicondesign-flag2/png/Latvia64.png",
+                4: "./customicondesign-flag2/png/Slovakia64.png",
+                5: "./customicondesign-flag2/png/Hungary64.png",
+                6: "./customicondesign-flag2/png/Italy64.png",
+                7: "./customicondesign-flag2/png/Austria64.png",
+                8: "./customicondesign-flag2/png/Czech64.png",
+                9: "./customicondesign-flag2/png/Belgium64.png",
+                10: "./customicondesign-flag2/png/Netherlands64.png",
+                11: "./customicondesign-flag2/png/Germany64.png",
+                12: "./customicondesign-flag2/png/Denmark64.png",
+                13: "./customicondesign-flag2/png/Sweden64.png",
+            }
+            //Iterate through all points in mapPoints
+            $.each(mapPoints, function (key, value) {
+                let marker;
+                var myLatLng = new google.maps.LatLng(value.latitude, value.longitude);
+
+                if (key == 0) {
+                    marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        visible: false
+                    });
+                } else {
+                    marker = new google.maps.Marker({
+                        position: myLatLng,
+                        map: map,
+                        icon: flags[key],
+                        visible: false
+                    });
+                }
+                //create marker
+
+
+                markers.push(marker);
+
+                //add to bounds and path
+                bounds.extend(myLatLng);
+            });
+
+            //Center & zoom map on all mapPoints
+            map.fitBounds(bounds);
+
+            //Add first mapPoint to an array that will keep points that have been animated
+            pointsDone.push(new google.maps.LatLng(mapPoints[0].latitude, mapPoints[0].longitude));
+
+            //Start the animation on first point in mapPoints
+            google.maps.event.addListener(map, 'idle', function () {
+                pathAnimation(0);
+            });
+
+        }
+
+
+        //Following function gets called one polyline at a time
+        function pathAnimation(point) {
+
+            //Make marker visible once path has reached that point
+            markers[point].setVisible(true);
+
+            //Set start & end point for this polyline
+            startPoint = pointsDone[0];
+            endPoint = new google.maps.LatLng(mapPoints[point + 1].latitude, mapPoints[point + 1].longitude);
+
+            //Create the polyline
+            myPath = new google.maps.Polyline({
+                path: pointsDone,
+                geodesic: false,
+                strokeColor: '#000000',
+                strokeOpacity: 1.0,
+                strokeWeight: 1,
+                map: map
+            });
+
+            //Add this point to the array keeping points that have already been animated to
+            pointsDone.push(endPoint);
+
+            //Animation loop
+            step = 0;
+            myInterval = setInterval(function () {
+                step += 1;
+                if (step > stepSize) {
+                    //Done drawing, clear the interval, and call pathAnimation() again, IF we're not done animating all the polylines
+                    clearInterval(myInterval);
+                    if (pointsDone.length - 1 < mapPoints.length) {
+                        pathAnimation(pointsDone.length - 1);
+                    }
+                }
+                else {
+                    //Not done drawing yet...
+                    progress = google.maps.geometry.spherical.interpolate(startPoint, endPoint, step / stepSize);
+                    myPath.setPath([startPoint, progress]);
+                }
+            }, stepTime);
+        }
+        // read the link on how above code works
+        var findMe = document.querySelectorAll('#map');
+        let scrollCounter = 0;
+        window.addEventListener('scroll', function (event) {
+            // add event on scroll
+            findMe.forEach(element => {
+                //for each .thisisatest
+                if (isInViewport(element)) {
+                    if (!scrollCounter) {
+                        //if in Viewport
+                        //Start it up
+                        initializeMap();
+                        //element.classList.add("draw");
+                        scrollCounter = 1
+                    }
+
+                } else {
+                    // element.classList.remove("draw");
+                    // // window.setTimeout(100)
+                    // // Set the coordinates of the original point back to origin
+                    // if (point.features[0].geometry.coordinates != origin){
+                    //     point.features[0].geometry.coordinates = origin;
+                    //     map.getSource('point').setData(point);
+
+                    // }
+
+                    // cechiaPoint.features[0].geometry.coordinates = origin;
+
+
+                    // Update the source layer
+
+                    // map.getSource('cechiaPoint').setData(cechiaPoint);
+
+
+                    // // Reset the counter
+                    counter = 0;
+
+                    // Restart the animation
+                    //animate(counter);
+                }
+            });
+        }, false);
+
+
+    </script>
+    <script>
+        
+    </script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  -->
+</body>
+
+</html>

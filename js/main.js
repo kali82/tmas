@@ -243,7 +243,7 @@ $('#burger').on('click',function(e) {
 	e.preventDefault();
   
 	$('#nav-main, body, #burger').toggleClass('abrido');
-  
+  $('body').toggleClass('blockPage');
 	if($('#header-main').hasClass('arre'))
 		{$('#header-main').removeClass('arre').addClass('arreno');}
 	else if($('#header-main').hasClass('arreno'))
