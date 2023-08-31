@@ -11,7 +11,242 @@ https://templatemo.com/tm-513-avalon
     padding: 0;
     font-family: 'Open Sans', arial, sans-serif;
 }
+/* PRACOWNICY */
+#empSlider,
+.emp-wrap,
+.emp-slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.emp-wrap {
+	position: relative;
+  }
+.empslide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
+.empslide1 {
+	background-image: url("../img/empSlide/1.JPEG");
+  }
+  .empslide2 {
+	background-image: url("../img/empSlide/2.JPEG");
+  }
+  .empslide3 {
+	background-image: url("../img/empSlide/3.JPG");
+  }
+  .empslide4 {
+	background-image: url("../img/empSlide/4.JPG");
+  }
+  .empslide5 {
+	background-image: url("../img/empSlide/5.JPG");
+  }
+  .empslide6 {
+	background-image: url("../img/empSlide/6.jpeg");
+  }
+  .emp-slide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .emp-slide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .emp-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #emp-arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#emp-arrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+ /* SIEDZIBA */
+#locslider,
+.locwrap,
+.locslide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.locwrap {
+	position: relative;
+  }
+.locslide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.locslide1 {
+	background-image: url("../img/locSlide/1.JPEG");
+  }
+  .locslide2 {
+	background-image: url("../img/locSlide/2.JPEG");
+  }
+  .locslide3 {
+	background-image: url("../img/locSlide/3.JPEG");
+  }
+  .locslide4 {
+	background-image: url("../img/locSlide/4.JPG");
+  }
+  .locslide5 {
+	background-image: url("../img/locSlide/5.JPG");
+  }
+  .locslide6 {
+	background-image: url("../img/locSlide/6.JPG");
+  }
+  .locslide7 {
+	background-image: url("../img/locSlide/7.JPG");
+  }  
+  .locslide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .locslide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .locarrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #locarrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#locarrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+/* FLOTA */  
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 500px;
+  overflow-x: hidden;
+}
+.wrap {
+  position: relative;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.slide1 {
+	background-image: url("../img/Slide/1.JPEG");
+  }
+.slide2 {
+	background-image: url("../img/Slide/2.JPEG");
+}
+.slide3 {
+	background-image: url("../img/Slide/3.JPEG");
+}
+.slide4 {
+	background-image: url("../img/Slide/4.JPG");
+}
+.slide5 {
+	background-image: url("../img/Slide/5.JPEG");
+}
+.slide6 {
+	background-image: url("../img/Slide/6.jpg");
+}
+.slide7 {
+	background-image: url("../img/Slide/7.jpg");
+}
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+.ag-timeline_tagline {
+	color: beige !important;
+}
+.title {
+	color: beige !important;
+}
+body{
+	background-color: #0e0d0dcc !important;
+}
 .galery-image ul {
   display: flex;
   flex-wrap: wrap;
@@ -97,7 +332,7 @@ https://templatemo.com/tm-513-avalon
 	flex: 1;
 	padding: 20px;
 	max-width: 300px;
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #72DE15;
 }
 
 .list-item {
@@ -236,14 +471,8 @@ https://templatemo.com/tm-513-avalon
 	max-width: 600px;
 	height: 350px;
 	/* content: url("../img/4komoryWew.PNG"); */
-  }
+}
 
-.map-window {
-	/* display: inline-flex; */
-}
-.map-content {
-	/* height: 100%; */
-}
 .map-title {
 	padding-top: 10px;
 	height: 10%;
@@ -1790,6 +2019,7 @@ body {
 	overflow:hidden
   }
   #header-main {
+	text-align: center;
 	cursor: pointer;
 	position: fixed;
 	box-shadow: 0 0 0 0 rgba(243, 243, 243, 1) inset;
@@ -1801,17 +2031,18 @@ body {
   
   #header-main.arre {
 	position: fixed;
-	box-shadow: 0 93px 0 0 rgba(243, 243, 243, 1) inset;
+	box-shadow: 0 93px 0 0 rgb(48, 46, 46) inset;
   }
   
   .brand {
+	color: darkgray !important;
 	position: absolute;
-	right: 2em;
+	left: 10rem;
 	top: 10%;
-	z-index: 6;
+	max-width: 200px;
+	z-index: 10;
 	font-family: sans-serif;
 	text-transform: uppercase;
-	color:#ddd;
 	font-weight:600;
 	font-size:2em;
 	padding:.2em .5em;

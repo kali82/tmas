@@ -399,5 +399,3 @@ function isInViewport(el) {
 
   );
 }
-
-

@@ -75,6 +75,165 @@
         }
       }
       </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var sliderImages = document.querySelectorAll(".slide")
+            arrowLeft = document.querySelector("#arrow-left")
+            arrowRight = document.querySelector("#arrow-right")
+            current = 0;
+
+            // Clear all images
+            function reset() {
+            for (var i = 0; i < sliderImages.length; i++) {
+                sliderImages[i].style.display = "none";
+            }
+            }
+
+            // Init slider
+            function startSlide() {
+            reset();
+            sliderImages[0].style.display = "block";
+            }
+
+            // Show prev
+            function slideLeft() {
+            reset();
+            sliderImages[current - 1].style.display = "block";
+            current--;
+            }
+
+            // Show next
+            function slideRight() {
+            reset();
+            sliderImages[current + 1].style.display = "block";
+            current++;
+            }
+
+            // Left arrow click
+            arrowLeft.addEventListener("click", function() {
+            if (current === 0) {
+                current = sliderImages.length;
+            }
+            slideLeft();
+            });
+
+            // Right arrow click
+            arrowRight.addEventListener("click", function() {
+            if (current === sliderImages.length - 1) {
+                current = -1;
+            }
+            slideRight();
+            });
+
+            startSlide();
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var empSliderImages = document.querySelectorAll(".empslide")
+            emparrowLeft = document.querySelector("#emp-arrow-left")
+            emparrowRight = document.querySelector("#emp-arrow-right")
+            empcurrent = 0;
+
+            // Clear all images
+            function resetemp() {
+            for (var i = 0; i < empSliderImages.length; i++) {
+                empSliderImages[i].style.display = "none";
+            }
+            }
+
+            // Init slider
+            function startempSlide() {
+            resetemp();
+            empSliderImages[0].style.display = "block";
+            }
+
+            // Show prev
+            function slideempLeft() {
+            resetemp();
+            empSliderImages[empcurrent - 1].style.display = "block";
+            empcurrent--;
+            }
+
+            // Show next
+            function slideempRight() {
+            resetemp();
+            empSliderImages[empcurrent + 1].style.display = "block";
+            empcurrent++;
+            }
+
+            // Left arrow click
+            emparrowLeft.addEventListener("click", function() {
+            if (empcurrent === 0) {
+                empcurrent = empSliderImages.length;
+            }
+            slideempLeft();
+            });
+
+            // Right arrow click
+            emparrowRight.addEventListener("click", function() {
+            if (empcurrent === empSliderImages.length - 1) {
+                empcurrent = -1;
+            }
+            slideempRight();
+            });
+
+            startempSlide();
+        });
+      </script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var locSliderImages = document.querySelectorAll(".locslide")
+                    locarrowLeft = document.querySelector("#locarrow-left")
+                    locarrowRight = document.querySelector("#locarrow-right")
+                    loccurrent = 0;
+        
+                    // Clear all images
+                    function resetloc() {
+                    for (var i = 0; i < locSliderImages.length; i++) {
+                        locSliderImages[i].style.display = "none";
+                    }
+                    }
+        
+                    // Init slider
+                    function startlocSlide() {
+                    resetloc();
+                    locSliderImages[0].style.display = "block";
+                    }
+        
+                    // Show prev
+                    function slidelocLeft() {
+                    resetloc();
+                    locSliderImages[loccurrent - 1].style.display = "block";
+                    loccurrent--;
+                    }
+        
+                    // Show next
+                    function slidelocRight() {
+                    resetloc();
+                    locSliderImages[loccurrent + 1].style.display = "block";
+                    loccurrent++;
+                    }
+        
+                    // Left arrow click
+                    locarrowLeft.addEventListener("click", function() {
+                    if (loccurrent === 0) {
+                        loccurrent = locSliderImages.length;
+                    }
+                    slidelocLeft();
+                    });
+        
+                    // Right arrow click
+                    locarrowRight.addEventListener("click", function() {
+                    if (loccurrent === locSliderImages.length - 1) {
+                        loccurrent = -1;
+                    }
+                    slidelocRight();
+                    });
+        
+                    startlocSlide();
+                });
+              </script>
 </head>
 
 <body>
@@ -398,7 +557,7 @@
                     <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
                 </div>
                 <div class="map-text">
-                    <p style="width: 90%;margin: auto; margin-bottom: 10px;"
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px; color: darkgrey !important;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
                         Obsługujemy klientów z terenu całej Unii Europejskiej.
                         Przede wszystkim jeździmy po terenach: Niemiec,
@@ -418,6 +577,7 @@
         </div> -->
         </div>
     </section>
+
     <div class="image-repeter">
     </div>
     <div class="container mb-5 pb-lg-5" id="pracownicyID">
@@ -429,7 +589,7 @@
             </div>
             
             <div class="col-lg-6 col-12 mt-3 mb-lg-5">
-                <p class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="300">Nasi pracownicy to grono
+                <p class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="300" style="color: darkgray !important; font-size: large !important;">Nasi pracownicy to grono
                     zaufanych i doświadczonych ludzi. Wszyscy dysponują zaświadczeniem
                     ADR, stale przechodzą odpowiednie szkolenia i zdają egzaminy.
                     Dokładamy wszelkich starań, by stale podwyższać ich kompetencje.
@@ -439,16 +599,52 @@
             </div>
 
             <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Nasz zespół wyróżnia się
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: large !important;"> Nasz zespół wyróżnia się
                     przede wszystkim zaangażowaniem. To grupa ludzi zdolna do poświęceń,
                     wyrzeczeń i ciężkiej pracy. Dzięki ich fachowości możemy świadczyć usługi na wysokim poziomie
                     już
                     od prawie 30 lat.
                     Oni stanowią największą siłę firmy.
                     Im zawdzięczamy nasz sukces.</p>
-                    
+                    <div class="emp-wrap">
+                        <div id="emp-arrow-left" class="emp-arrow"></div>
+                        <div id="empSlider">
+                          <div class="empslide empslide1">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image One</span> -->
+                            </div>
+                          </div>
+                          <div class="empslide empslide2">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image Two</span> -->
+                            </div>
+                          </div>
+                          <div class="empslide empslide3">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image Three</span> -->
+                            </div>
+                          </div>
+                          <div class="empslide empslide4">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image Three</span> -->
+                            </div>
+                          </div>
+                          <div class="empslide empslide5">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image Three</span> -->
+                            </div>
+                          </div>
+                          <div class="empslide empslide6">
+                            <div class="emp-slide-content">
+                              <!-- <span>Image Three</span> -->
+                            </div>
+                          </div>
+                        </div>
+                        <div id="emp-arrow-right" class="emp-arrow"></div>
+                    </div>
             </div>
         </div>
+        
     </div>
     <div class="image-repeter-2"></div>
     <section id="flotaID" class="map-window">
@@ -460,13 +656,13 @@
                     <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
                 </div>
                 <div class="map-text">
-                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large;"
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large; color: darkgray !important;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
                         Do dyspozycji mamy 20 ciągników marki Volvo oraz DAF spełniających normę EURO 6 oraz 21 cystern producentów Cocol, VanHool, GOFA, Feldbinder, Hendricks.
 
                     </p>
                 </div>
-                <div class="test-container" data-aos="fade-up" data-aos-delay="700">
+                <div class="test-container" data-aos="fade-up" data-aos-delay="700" style="color: darkgray !important;">
                     <div class="list" id="list">
                         <h3>Wielokomorowe</h3>
                         <div class="list-item" onclick="showDetails('4 komory stalowe o pojemności 10-7,5-10-7,5', './img/4komory.PNG', '', './img/4komoryWew.PNG')">4-komorowa 🡪</div>
@@ -486,12 +682,51 @@
                     </div>
                 </div>
                 <div class="map-text">
-                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large;"
+                    <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large; color: darkgray !important;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
                         W celu zapewnienia usług na najwyższym poziomie w każdym z aut zamontowany jest system GPS. Umożliwia on monitorowanie floty w czasie rzeczywistym i podaje lokalizację z kompleksowymi danymi. Przesyła także informacje z tachografu cyfrowego, co znacząco wpływa na dalsze planowanie pracy i bezpieczeństwo na drodze. Dzięki takim rozwiązaniom, mamy też sposobność transportować towary objęte systemem SENT.
                         Nasza flota jest na bieżąco odmładzana, a grupa zaufanych mechaników czuwa nad utrzymaniem jej w dobrej kondycji. Dzięki temu, możemy zapewnić, że nasz sprzęt jest zawsze gotowy do pracy i spełnia wszelkie normy niezbędne do przewożenia tak wymagających ładunków. 
                         
                     </p>
+                    
+                </div>
+                <div class="sliderWrapper" style="width: 80%; height: 500px; display: inline-block;">
+                    <div class="wrap">
+                        <div id="arrow-left" class="arrow"></div>
+                        <div id="slider">
+                        <div class="slide slide1">
+                            <div class="slide-content">
+                            <!-- <span>Image One</span> -->
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="slide-content">
+                            <!-- <span>Image Two</span> -->
+                            </div>
+                        </div>
+                        <div class="slide slide3">
+                            <div class="slide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="slide slide4">
+                            <div class="slide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="slide slide5">
+                            <div class="slide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="slide slide6">
+                            <div class="slide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        </div>
+                        <div id="arrow-right" class="arrow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,8 +745,48 @@
             </div>
 
             <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Siedziba firmy mieści się na terenie Strefy Aktywności Gospodarczej w Zielonej Górze. Mamy do dyspozycji nowoczesny budynek wraz z całodobowo monitorowanym placem. Do własnego użytku mamy również stację paliw oraz myjnię samochodów ciężarowych wyposażoną w głowicę umożliwiającą mycie cystern wewnątrz. Na terenie obiektu mieści się też dwustanowiskowy warsztat.</p>
-                    
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: large;"> Siedziba firmy mieści się na terenie Strefy Aktywności Gospodarczej w Zielonej Górze. Mamy do dyspozycji nowoczesny budynek wraz z całodobowo monitorowanym placem. Do własnego użytku mamy również stację paliw oraz myjnię samochodów ciężarowych wyposażoną w głowicę umożliwiającą mycie cystern wewnątrz. Na terenie obiektu mieści się też dwustanowiskowy warsztat.</p>
+                <div class="locwrap">
+                    <div id="locarrow-left" class="locarrow"></div>
+                    <div id="locslider">
+                    <div class="locslide locslide1">
+                        <div class="locslide-content">
+                        <!-- <span>Image One</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide2">
+                        <div class="locslide-content">
+                        <!-- <span>Image Two</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide3">
+                        <div class="locslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide4">
+                        <div class="locslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide5">
+                        <div class="locslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide6">
+                        <div class="locslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="locslide locslide7">
+                        <div class="locslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    </div>
+                    <div id="locarrow-right" class="locarrow"></div>
+                </div>   
             </div>
         </div>
     </div>
@@ -524,8 +799,8 @@
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
             <div class="col-lg-6 col-12 mt-3 mb-lg-5">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Specjalizujemy się w przewozach wąskiej grupy materiałów niebezpiecznych klasy 8 ADR.<br>Towar stanowi płynna chemia, w tym: </p>
-                <ul>
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important;"> Specjalizujemy się w przewozach wąskiej grupy materiałów niebezpiecznych klasy 8 ADR.<br>Towar stanowi płynna chemia, w tym: </p>
+                <ul style="color: darkgray !important; font-size: large;">
                     <li>&#10551; UN 1789 – kwas chlorowodorowy (kwas solny)</li>
                     <li>&#10551; UN 1778 – kwas fluorokrzemowy</li>
                     <li>&#10551; UN 1791 – podchloryn</li>
@@ -550,9 +825,9 @@
         </div>
 
         <div class="row">
-            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100"> Nasza firma figuruje w bazie danych o produktach i opakowaniach oraz o gospodarce odpadami (BDO) pod indywidualnym numerem rejestrowym 000008710. </p>
+            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;"> Nasza firma figuruje w bazie danych o produktach i opakowaniach oraz o gospodarce odpadami (BDO) pod indywidualnym numerem rejestrowym 000008710. </p>
   
-            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Wszystkie nasze ładunki są ubezpieczone w ramach odpowiedzialności cywilnej przewoźnika OCP.</p>
+            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;">Wszystkie nasze ładunki są ubezpieczone w ramach odpowiedzialności cywilnej przewoźnika OCP.</p>
         </div>
 
         <div class="container">
@@ -576,7 +851,7 @@
           </div>
         </div>
         <div class="row">
-            <p style="margin-left: 70px; margin-right: 70px;" class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.</p>
+            <p style="margin-left: 70px; margin-right: 70px; color: darkgray !important; font-size: large;" class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.</p>
         </div>
 
     </div>
@@ -589,8 +864,8 @@
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
             <div style="font-size: 20px;" class="col-lg-6 col-12 mt-3 mb-lg-5">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500"> Świadczymy kompleksowe usługi w zakresie: </p>
-                <ul>
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: larger;"> Świadczymy kompleksowe usługi w zakresie: </p>
+                <ul style="color: darkgray !important;">
                     <li data-aos="fade-up" data-aos-delay="600">&#10551; mechaniki ogólnej</li>
                     <li data-aos="fade-up" data-aos-delay="700">&#10551; komputerowej diagnostyki samochodów ciężarowych, naczep, przyczep</li>
                     <li data-aos="fade-up" data-aos-delay="800">&#10551; naprawy silników</li>
@@ -641,16 +916,16 @@
           <img src="./img/gallery/4.JPEG" alt="XOXO venue in between talks" loading="lazy">
         </li>
         <li>
-          <img src="./img/gallery/5.jpg" alt="Trees lit by green light during dusk" loading="lazy">
+          <img src="./img/gallery/5.JPG" alt="Trees lit by green light during dusk" loading="lazy">
         </li>
         <li>
-          <img src="./img/gallery/6.jpg" alt="Portrait of Justin Pervorse" loading="lazy">
+          <img src="./img/gallery/6.JPG" alt="Portrait of Justin Pervorse" loading="lazy">
         </li>
         <li>
-          <img src="./img/gallery/7.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+          <img src="./img/gallery/7.JPG" alt="Empty bike racks outside a hotel" loading="lazy">
         </li>
         <li>
-            <img src="./img/gallery/8.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
+            <img src="./img/gallery/8.JPG" alt="Empty bike racks outside a hotel" loading="lazy">
           </li>
           <li>
             <img src="./img/gallery/9.jpg" alt="Empty bike racks outside a hotel" loading="lazy">
