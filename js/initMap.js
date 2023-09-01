@@ -2,9 +2,6 @@
 
 
 
-
-
-
  var map2;
 // Initialize and add the map51.961104338425066, 15.544904171130122
 function contactMap() {
