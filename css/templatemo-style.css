@@ -63,7 +63,7 @@ https://templatemo.com/tm-513-avalon
   .emp-arrow {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 90%;
 	margin-top: -35px;
 	width: 0;
 	height: 0;
@@ -136,7 +136,7 @@ https://templatemo.com/tm-513-avalon
   .locarrow {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 90%;
 	margin-top: -35px;
 	width: 0;
 	height: 0;
@@ -149,6 +149,149 @@ https://templatemo.com/tm-513-avalon
 	margin-left: 30px;
   }
 #locarrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+   /* TRANSPORT */
+#traslider,
+.trawrap,
+.traslide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.trawrap {
+	position: relative;
+  }
+.traslide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.traslide1 {
+	background-image: url("../img/traSlide/1.JPEG");
+  }
+  .traslide2 {
+	background-image: url("../img/traSlide/2.JPG");
+  }
+  .traslide3 {
+	background-image: url("../img/traSlide/3.JPG");
+  }
+  .traslide4 {
+	background-image: url("../img/traSlide/4.JPG");
+  }
+  .traslide5 {
+	background-image: url("../img/traSlide/5.JPG");
+  }
+  .traslide6 {
+	background-image: url("../img/traSlide/6.JPG");
+  }
+  .traslide7 {
+	background-image: url("../img/traSlide/7.JPG");
+  }  
+  .traslide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .traslide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .traarrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #traarrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#traarrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+     /* SERWIS */
+#serslider,
+.serwrap,
+.serslide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 450px;
+  overflow-x: hidden;
+}
+.serwrap {
+	position: relative;
+  }
+.serslide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.serslide1 {
+	background-image: url("../img/serSlide/1.JPG");
+  }
+  .serslide2 {
+	background-image: url("../img/serSlide/2.JPG");
+  }
+  .serslide3 {
+	background-image: url("../img/serSlide/3.JPG");
+  }
+  .serslide4 {
+	background-image: url("../img/serSlide/4.JPG");
+  }
+  .serslide5 {
+	background-image: url("../img/serSlide/5.JPEG");
+  }
+  .serslide6 {
+	background-image: url("../img/serSlide/6.JPG");
+  } 
+  .serslide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .serslide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .serarrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #serarrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #ffffff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#serarrow-right {
 	border-width: 30px 0 30px 40px;
 	border-color: transparent transparent transparent #fff;
 	right: 0;
@@ -215,7 +358,7 @@ https://templatemo.com/tm-513-avalon
 .arrow {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 90%;
   margin-top: -35px;
   width: 0;
   height: 0;
@@ -1587,7 +1730,11 @@ transition-delay: 0.3s;
 	padding-left: 120px;
 	padding-right: 120px;
 	text-align: center;
-	background-image: url(../img/contact-back.JPEG);
+	background-image:         
+	linear-gradient(
+		rgba(0, 0, 0, 0.7), 
+		rgba(0, 0, 0, 0.7)
+	  ), url(../img/contact-back.JPEG);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -1656,12 +1803,12 @@ transition-delay: 0.3s;
 
 .contact-right-content {
 	min-height: 500px;
-	height: 500px;
+	height: 100%;
 	line-height: 500px;
 	padding-top: 150px;
 	padding-bottom: 150px;
 	text-align: center;
-	background-image: url(../img/contact-right-bg.png);
+	/* background-image: url(../img/contact-right-bg.png); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;

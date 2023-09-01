@@ -234,6 +234,113 @@
                     startlocSlide();
                 });
               </script>
+              </script>
+              <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                      var traSliderImages = document.querySelectorAll(".traslide")
+                      traarrowLeft = document.querySelector("#traarrow-left")
+                      traarrowRight = document.querySelector("#traarrow-right")
+                      tracurrent = 0;
+          
+                      // Clear all images
+                      function resettra() {
+                      for (var i = 0; i < traSliderImages.length; i++) {
+                          traSliderImages[i].style.display = "none";
+                      }
+                      }
+          
+                      // Init slider
+                      function starttraSlide() {
+                      resettra();
+                      traSliderImages[0].style.display = "block";
+                      }
+          
+                      // Show prev
+                      function slidetraLeft() {
+                      resettra();
+                      traSliderImages[tracurrent - 1].style.display = "block";
+                      tracurrent--;
+                      }
+          
+                      // Show next
+                      function slidetraRight() {
+                      resettra();
+                      traSliderImages[tracurrent + 1].style.display = "block";
+                      tracurrent++;
+                      }
+          
+                      // Left arrow click
+                      traarrowLeft.addEventListener("click", function() {
+                      if (tracurrent === 0) {
+                          tracurrent = traSliderImages.length;
+                      }
+                      slidetraLeft();
+                      });
+          
+                      // Right arrow click
+                      traarrowRight.addEventListener("click", function() {
+                      if (tracurrent === traSliderImages.length - 1) {
+                          tracurrent = -1;
+                      }
+                      slidetraRight();
+                      });
+          
+                      starttraSlide();
+                  });
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var serSliderImages = document.querySelectorAll(".serslide")
+                        serarrowLeft = document.querySelector("#serarrow-left")
+                        serarrowRight = document.querySelector("#serarrow-right")
+                        sercurrent = 0;
+            
+                        // Clear all images
+                        function resetser() {
+                        for (var i = 0; i < serSliderImages.length; i++) {
+                            serSliderImages[i].style.display = "none";
+                        }
+                        }
+            
+                        // Init slider
+                        function startserSlide() {
+                        resetser();
+                        serSliderImages[0].style.display = "block";
+                        }
+            
+                        // Show prev
+                        function slideserLeft() {
+                        resetser();
+                        serSliderImages[sercurrent - 1].style.display = "block";
+                        sercurrent--;
+                        }
+            
+                        // Show next
+                        function slideserRight() {
+                        resetser();
+                        serSliderImages[sercurrent + 1].style.display = "block";
+                        sercurrent++;
+                        }
+            
+                        // Left arrow click
+                        serarrowLeft.addEventListener("click", function() {
+                        if (sercurrent === 0) {
+                            sercurrent = serSliderImages.length;
+                        }
+                        slideserLeft();
+                        });
+            
+                        // Right arrow click
+                        serarrowRight.addEventListener("click", function() {
+                        if (sercurrent === serSliderImages.length - 1) {
+                            sercurrent = -1;
+                        }
+                        slideserRight();
+                        });
+            
+                        startserSlide();
+                    });
+                  </script>
 </head>
 
 <body>
@@ -820,7 +927,7 @@
                 <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr.png" alt="">
             </div>
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2.jpg" alt="">  
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2v2.png" alt="">  
             </div>
         </div>
 
@@ -852,6 +959,49 @@
         </div>
         <div class="row">
             <p style="margin-left: 70px; margin-right: 70px; color: darkgray !important; font-size: large;" class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.</p>
+            <div class="trawrapper" style="width: 50%; margin: auto;">
+                <div class="trawrap">
+                    <div id="traarrow-left" class="traarrow"></div>
+                    <div id="traslider">
+                    <div class="traslide traslide1">
+                        <div class="traslide-content">
+                        <!-- <span>Image One</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide2">
+                        <div class="traslide-content">
+                        <!-- <span>Image Two</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide3">
+                        <div class="traslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide4">
+                        <div class="traslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide5">
+                        <div class="traslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide6">
+                        <div class="traslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    <div class="traslide traslide7">
+                        <div class="traslide-content">
+                        <!-- <span>Image Three</span> -->
+                        </div>
+                    </div>
+                    </div>
+                    <div id="traarrow-right" class="traarrow"></div>
+                </div> 
+            </div>  
         </div>
 
     </div>
@@ -884,7 +1034,45 @@
             </div>
 
             <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5">
-                <img class="me-4 employees-left-text" style="width: 600px;" data-aos="fade-up" data-aos-delay="1000" src="./img//serwis.JPG" alt="">
+                <!-- <img class="me-4 employees-left-text" style="width: 600px;" data-aos="fade-up" data-aos-delay="1000" src="./img//serwis.JPG" alt=""> -->
+                <!-- <div class="trawrapper" style="width: 50%; margin: auto;"> -->
+                    <div class="serwrap">
+                        <div id="serarrow-left" class="serarrow"></div>
+                        <div id="serslider">
+                        <div class="serslide serslide1">
+                            <div class="serslide-content">
+                            <!-- <span>Image One</span> -->
+                            </div>
+                        </div>
+                        <div class="serslide serslide2">
+                            <div class="serslide-content">
+                            <!-- <span>Image Two</span> -->
+                            </div>
+                        </div>
+                        <div class="serslide serslide3">
+                            <div class="serslide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="serslide serslide4">
+                            <div class="serslide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="serslide serslide5">
+                            <div class="serslide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        <div class="serslide serslide6">
+                            <div class="serslide-content">
+                            <!-- <span>Image Three</span> -->
+                            </div>
+                        </div>
+                        </div>
+                        <div id="serarrow-right" class="serarrow"></div>
+                    </div> 
+                <!-- </div>  -->
             </div>
             <!-- <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
                 <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2.jpg" alt="">  
@@ -1047,13 +1235,22 @@
                       </div>  
                     <form id="contact" action="" method="post">
                         <div class="row">
-                            <div class="col-md-4">
-                                <fieldset>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="col-sm-2 col-md-2" > 
+                                    <img style="width: 48px;" src="./img/location/icons8-location-96.png" alt="">
+                                </div>
+                                <div class="col-sm-10 col-md-10" style="text-align: left; padding: 0;"> 
+                                 <span style="color: aliceblue;">Siedziba firmy</span>
+                                     <p style="color: aliceblue;">Ul. Międzyrzecka 5
+                                        65-001 Zielona Góra</p>
+                         </div>
+
+                                <!-- <fieldset>
                                     <input name="name" type="text" class="form-control" id="name"
                                         placeholder="Imię..." required="">
-                                </fieldset>
+                                </fieldset> -->
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <fieldset>
                                     <input name="email" type="email" class="form-control" id="email"
                                         placeholder="Adres E-mail..." required="">
@@ -1064,7 +1261,7 @@
                                     <input name="subject" type="text" class="form-control" id="subject"
                                         placeholder="Temat..." required="">
                                 </fieldset>
-                            </div>
+                            </div> -->
                             <div class="col-md-12">
                                 <fieldset>
                                     <textarea name="message" rows="6" class="form-control" id="message"
@@ -1082,7 +1279,7 @@
                 <div class="col-md-4">
 
                     <div id="contact-map" class="contact-right-content">
-                        <div class="icon"><img src="img/map-marker-icon.png" alt=""></div>
+                        <!-- <div class="icon"><img src="img/map-marker-icon.png" alt=""></div> -->
                         <h4>You can find us on maps</h4>
                     </div>
                 </div>
@@ -1131,7 +1328,7 @@
     <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
     <script>
         $(function() {
-            
+            var TweenMax;
     var hiddenFormBottom = $("#signUpForm").css("bottom");
     var hiddenFormRight = $("#signUpForm").css("right");
   
@@ -1443,6 +1640,7 @@
         var findMe = document.querySelectorAll('#map');
         let scrollCounter = 0;
         window.addEventListener('scroll', function (event) {
+            try{
             // add event on scroll
             findMe.forEach(element => {
                 //for each .thisisatest
@@ -1480,6 +1678,7 @@
                     //animate(counter);
                 }
             });
+        }catch(err){}
         }, false);
 
 
