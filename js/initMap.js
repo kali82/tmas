@@ -3,11 +3,10 @@
 
 
  var map2;
-// Initialize and add the map51.961104338425066, 15.544904171130122
 function contactMap() {
-    const officeLocation = { lat: 51.961104338425066, lng: 15.544904171130122 };
+    const officeLocation = { lat: 51.96170736757314, lng: 15.535628188855894 };
     const map2 = new google.maps.Map(document.getElementById("contact-map"), {
-      zoom: 12,
+      zoom: 16,
       center: officeLocation,
     });
     map2.setMapTypeId(google.maps.MapTypeId.HYBRID)

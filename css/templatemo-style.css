@@ -11,6 +11,247 @@ https://templatemo.com/tm-513-avalon
     padding: 0;
     font-family: 'Open Sans', arial, sans-serif;
 }
+/* HISTORIA 2021 */
+#his4Slider,
+.his4-wrap,
+.his4-slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.his4-wrap {
+	position: relative;
+  }
+.his4slide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.his4slide1 {
+	background-image: url("../img/historia/2021/1.jpeg");
+  }
+  .his4slide2 {
+	background-image: url("../img/historia/2021/2.JPEG");
+  }
+  .his4slide3 {
+	background-image: url("../img/historia/2021/3.JPEG");
+  }
+  .his4slide4 {
+	background-image: url("../img/historia/2021/4.JPG");
+  }
+  .his4-slide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .his4-slide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .his4-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #his4-arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#his4-arrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+/* HISTORIA 1999 */
+#his3Slider,
+.his3-wrap,
+.his3-slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.his3-wrap {
+	position: relative;
+  }
+.his3slide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.his3slide1 {
+	background-image: url("../img/historia/1999/1.jpeg");
+  }
+  .his3slide2 {
+	background-image: url("../img/historia/1999/2.jpeg");
+  }
+  .his3slide3 {
+	background-image: url("../img/historia/1999/3.jpeg");
+  }
+  .his3-slide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .his3-slide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .his3-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #his3-arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#his3-arrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+/* HISTORIA 1995 */
+#his2Slider,
+.his2-wrap,
+.his2-slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.his2-wrap {
+	position: relative;
+  }
+.his2slide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.his2slide1 {
+	background-image: url("../img/historia/1995/1.jpeg");
+  }
+  .his2slide2 {
+	background-image: url("../img/historia/1995/2.jpeg");
+  }
+  .his2-slide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .his2-slide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .his2-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #his2-arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#his2-arrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
+/* HISTORIA 1993 */
+#his1Slider,
+.his1-wrap,
+.his1-slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 350px;
+  overflow-x: hidden;
+}
+.his1-wrap {
+	position: relative;
+  }
+.his1slide {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.his1slide1 {
+	background-image: url("../img/historia/1993/1.jpeg");
+  }
+  .his1slide2 {
+	background-image: url("../img/historia/1993/2.jpeg");
+  }
+  .his1-slide-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+  .his1-slide-content span {
+	font-size: 5rem;
+	color: #fff;
+  }
+  .his1-arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 90%;
+	margin-top: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+  }
+  #his1-arrow-left {
+	border-width: 30px 40px 30px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+  }
+#his1-arrow-right {
+	border-width: 30px 0 30px 40px;
+	border-color: transparent transparent transparent #fff;
+	right: 0;
+	margin-right: 30px;
+  }
 /* PRACOWNICY */
 #empSlider,
 .emp-wrap,
@@ -31,9 +272,6 @@ https://templatemo.com/tm-513-avalon
 	background-repeat: no-repeat;
 }
 
-.empslide1 {
-	background-image: url("../img/empSlide/1.JPEG");
-  }
   .empslide2 {
 	background-image: url("../img/empSlide/2.JPEG");
   }
@@ -96,24 +334,28 @@ https://templatemo.com/tm-513-avalon
 	position: relative;
   }
 .locslide {
+	background-position-y: 60%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
-.locslide1 {
+/* .locslide1 {
 	background-image: url("../img/locSlide/1.JPEG");
-  }
+  } */
   .locslide2 {
+	background-position-y: 90%;
 	background-image: url("../img/locSlide/2.JPEG");
   }
-  .locslide3 {
+  /* .locslide3 {
 	background-image: url("../img/locSlide/3.JPEG");
-  }
+  } */
   .locslide4 {
+	
 	background-image: url("../img/locSlide/4.JPG");
   }
   .locslide5 {
+	background-position-y: 90%;
 	background-image: url("../img/locSlide/5.JPG");
   }
   .locslide6 {
@@ -162,31 +404,35 @@ https://templatemo.com/tm-513-avalon
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  height: 450px;
+  height: 480px;
   overflow-x: hidden;
 }
 .trawrap {
 	position: relative;
   }
 .traslide {
+	background-position-y: 60%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .traslide1 {
+	background-position-y: 60%;
 	background-image: url("../img/traSlide/1.jpeg");
   }
-  .traslide2 {
+  /* .traslide2 {
 	background-image: url("../img/traSlide/2.JPG");
-  }
+  } */
   .traslide3 {
+	background-position-y: 58%;
 	background-image: url("../img/traSlide/3.jpg");
   }
   .traslide4 {
 	background-image: url("../img/traSlide/4.jpg");
   }
   .traslide5 {
+	background-position-y: 60%;
 	background-image: url("../img/traSlide/5.jpg");
   }
   .traslide6 {
@@ -257,6 +503,7 @@ https://templatemo.com/tm-513-avalon
 	background-image: url("../img/serSlide/3.jpg");
   }
   .serslide4 {
+	background-position-y: 80%;
 	background-image: url("../img/serSlide/4.jpg");
   }
   .serslide5 {
@@ -321,12 +568,14 @@ https://templatemo.com/tm-513-avalon
 
 
 .slide1 {
+	background-position-y: 65%;
 	background-image: url("../img/Slide/1.JPEG");
   }
 .slide2 {
 	background-image: url("../img/Slide/2.jpeg");
 }
 .slide3 {
+	background-position-y: 67%;
 	background-image: url("../img/Slide/3.jpeg");
 }
 .slide4 {
@@ -579,14 +828,14 @@ body{
 	margin-right: auto;
 }
 .image-repeter-5 {
-	background-size: cover !important;
+	background-size: contain ;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	background-image: url('../img/Siedziba1.JPEG');
-	background-size: 100% 100%;
+	background-image: url('../img/serwisBigPhoto.JPG');
+
     background-repeat: no-repeat;
 	background-position: center;
-	height: 50vh;
+	height: 60vh;
 	width: 100% !important;
 	margin-left: auto;
 	margin-right: auto;

@@ -128,6 +128,218 @@
             startSlide();
         });
       </script>
+           <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var his4SliderImages = document.querySelectorAll(".his4slide")
+                his4arrowLeft = document.querySelector("#his4-arrow-left")
+                his4arrowRight = document.querySelector("#his4-arrow-right")
+                his4current = 0;
+    
+                // Clear all images
+                function resethis4() {
+                for (var i = 0; i < his4SliderImages.length; i++) {
+                    his4SliderImages[i].style.display = "none";
+                }
+                }
+    
+                // Init slider
+                function starthis4Slide() {
+                resethis4();
+                his4SliderImages[0].style.display = "block";
+                }
+    
+                // Show prev
+                function slidehis4Left() {
+                resethis4();
+                his4SliderImages[his4current - 1].style.display = "block";
+                his4current--;
+                }
+    
+                // Show next
+                function slidehis4Right() {
+                resethis4();
+                his4SliderImages[his4current + 1].style.display = "block";
+                his4current++;
+                }
+    
+                // Left arrow click
+                his4arrowLeft.addEventListener("click", function() {
+                if (his4current === 0) {
+                    his4current = his4SliderImages.length;
+                }
+                slidehis4Left();
+                });
+    
+                // Right arrow click
+                his4arrowRight.addEventListener("click", function() {
+                if (his4current === his4SliderImages.length - 1) {
+                    his4current = -1;
+                }
+                slidehis4Right();
+                });
+    
+                starthis4Slide();
+            });
+          </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var his3SliderImages = document.querySelectorAll(".his3slide")
+            his3arrowLeft = document.querySelector("#his3-arrow-left")
+            his3arrowRight = document.querySelector("#his3-arrow-right")
+            his3current = 0;
+
+            // Clear all images
+            function resethis3() {
+            for (var i = 0; i < his3SliderImages.length; i++) {
+                his3SliderImages[i].style.display = "none";
+            }
+            }
+
+            // Init slider
+            function starthis3Slide() {
+            resethis3();
+            his3SliderImages[0].style.display = "block";
+            }
+
+            // Show prev
+            function slidehis3Left() {
+            resethis3();
+            his3SliderImages[his3current - 1].style.display = "block";
+            his3current--;
+            }
+
+            // Show next
+            function slidehis3Right() {
+            resethis3();
+            his3SliderImages[his3current + 1].style.display = "block";
+            his3current++;
+            }
+
+            // Left arrow click
+            his3arrowLeft.addEventListener("click", function() {
+            if (his3current === 0) {
+                his3current = his3SliderImages.length;
+            }
+            slidehis3Left();
+            });
+
+            // Right arrow click
+            his3arrowRight.addEventListener("click", function() {
+            if (his3current === his3SliderImages.length - 1) {
+                his3current = -1;
+            }
+            slidehis3Right();
+            });
+
+            starthis3Slide();
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var his2SliderImages = document.querySelectorAll(".his2slide")
+            his2arrowLeft = document.querySelector("#his2-arrow-left")
+            his2arrowRight = document.querySelector("#his2-arrow-right")
+            his2current = 0;
+
+            // Clear all images
+            function resethis2() {
+            for (var i = 0; i < his2SliderImages.length; i++) {
+                his2SliderImages[i].style.display = "none";
+            }
+            }
+
+            // Init slider
+            function starthis2Slide() {
+            resethis2();
+            his2SliderImages[0].style.display = "block";
+            }
+
+            // Show prev
+            function slidehis2Left() {
+            resethis2();
+            his2SliderImages[his2current - 1].style.display = "block";
+            his2current--;
+            }
+
+            // Show next
+            function slidehis2Right() {
+            resethis2();
+            his2SliderImages[his2current + 1].style.display = "block";
+            his2current++;
+            }
+
+            // Left arrow click
+            his2arrowLeft.addEventListener("click", function() {
+            if (his2current === 0) {
+                his2current = his2SliderImages.length;
+            }
+            slidehis2Left();
+            });
+
+            // Right arrow click
+            his2arrowRight.addEventListener("click", function() {
+            if (his2current === his2SliderImages.length - 1) {
+                his2current = -1;
+            }
+            slidehis2Right();
+            });
+
+            starthis2Slide();
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var his1SliderImages = document.querySelectorAll(".his1slide")
+            his1arrowLeft = document.querySelector("#his1-arrow-left")
+            his1arrowRight = document.querySelector("#his1-arrow-right")
+            his1current = 0;
+
+            // Clear all images
+            function resethis1() {
+            for (var i = 0; i < his1SliderImages.length; i++) {
+                his1SliderImages[i].style.display = "none";
+            }
+            }
+
+            // Init slider
+            function starthis1Slide() {
+            resethis1();
+            his1SliderImages[0].style.display = "block";
+            }
+
+            // Show prev
+            function slidehis1Left() {
+            resethis1();
+            his1SliderImages[his1current - 1].style.display = "block";
+            his1current--;
+            }
+
+            // Show next
+            function slidehis1Right() {
+            resethis1();
+            his1SliderImages[his1current + 1].style.display = "block";
+            his1current++;
+            }
+
+            // Left arrow click
+            his1arrowLeft.addEventListener("click", function() {
+            if (his1current === 0) {
+                his1current = his1SliderImages.length;
+            }
+            slidehis1Left();
+            });
+
+            // Right arrow click
+            his1arrowRight.addEventListener("click", function() {
+            if (his1current === his1SliderImages.length - 1) {
+                his1current = -1;
+            }
+            slidehis1Right();
+            });
+
+            starthis1Slide();
+        });
+      </script>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
             var empSliderImages = document.querySelectorAll(".empslide")
@@ -530,8 +742,22 @@
                                 <div class="ag-timeline-card_item">
                                     <div class="ag-timeline-card_inner">
                                         <div class="ag-timeline-card_img-box">
-                                            <img src="./img/1993.jpeg" class="ag-timeline-card_img" width="640"
-                                                height="360" />
+                                            <div class="his1-wrap">
+                                                <div id="his1-arrow-left" class="his1-arrow"></div>
+                                                <div id="his1Slider">
+                                                  <div class="his1slide his1slide1">
+                                                    <div class="his1-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his1slide his1slide2">
+                                                    <div class="his1-slide-content">
+                                                      <!-- <span>Image Two</span> -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div id="his1-arrow-right" class="his1-arrow"></div>
+                                            </div>
                                         </div>
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">1993</div>
@@ -566,8 +792,22 @@
                                 <div class="ag-timeline-card_item">
                                     <div class="ag-timeline-card_inner">
                                         <div class="ag-timeline-card_img-box">
-                                            <img src="./img/1995.jpeg" class="ag-timeline-card_img" width="640"
-                                                height="360" alt="" />
+                                            <div class="his2-wrap">
+                                                <div id="his2-arrow-left" class="his2-arrow"></div>
+                                                <div id="his2Slider">
+                                                  <div class="his2slide his2slide1">
+                                                    <div class="his2-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his2slide his2slide2">
+                                                    <div class="his2-slide-content">
+                                                      <!-- <span>Image Two</span> -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div id="his2-arrow-right" class="his2-arrow"></div>
+                                            </div>
 
                                         </div>
 
@@ -599,8 +839,27 @@
                                 <div class="ag-timeline-card_item">
                                     <div class="ag-timeline-card_inner">
                                         <div class="ag-timeline-card_img-box">
-                                            <img src="./img/1999.jpeg" class="ag-timeline-card_img" width="640"
-                                                height="360" alt="" />
+                                            <div class="his3-wrap">
+                                                <div id="his3-arrow-left" class="his3-arrow"></div>
+                                                <div id="his3Slider">
+                                                  <div class="his3slide his3slide1">
+                                                    <div class="his3-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his3slide his3slide2">
+                                                    <div class="his3-slide-content">
+                                                      <!-- <span>Image Two</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his3slide his3slide3">
+                                                    <div class="his3-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div id="his3-arrow-right" class="his3-arrow"></div>
+                                            </div>
                                         </div>
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">1999</div>
@@ -629,8 +888,32 @@
                                 <div class="ag-timeline-card_item">
                                     <div class="ag-timeline-card_inner">
                                         <div class="ag-timeline-card_img-box">
-                                            <img src="./img/2021.jpeg" class="ag-timeline-card_img" width="640"
-                                                height="360" alt="" />
+                                            <div class="his4-wrap">
+                                                <div id="his4-arrow-left" class="his4-arrow"></div>
+                                                <div id="his4Slider">
+                                                  <div class="his4slide his4slide1">
+                                                    <div class="his4-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his4slide his4slide2">
+                                                    <div class="his4-slide-content">
+                                                      <!-- <span>Image Two</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his4slide his4slide3">
+                                                    <div class="his4-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                  <div class="his4slide his4slide4">
+                                                    <div class="his4-slide-content">
+                                                      <!-- <span>Image One</span> -->
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div id="his4-arrow-right" class="his4-arrow"></div>
+                                            </div>
                                         </div>
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">2021</div>
@@ -716,34 +999,24 @@
                     <div class="emp-wrap">
                         <div id="emp-arrow-left" class="emp-arrow"></div>
                         <div id="empSlider">
-                          <div class="empslide empslide1">
-                            <div class="emp-slide-content">
-                              <!-- <span>Image One</span> -->
-                            </div>
-                          </div>
                           <div class="empslide empslide2">
                             <div class="emp-slide-content">
-                              <!-- <span>Image Two</span> -->
                             </div>
                           </div>
                           <div class="empslide empslide3">
                             <div class="emp-slide-content">
-                              <!-- <span>Image Three</span> -->
                             </div>
                           </div>
                           <div class="empslide empslide4">
                             <div class="emp-slide-content">
-                              <!-- <span>Image Three</span> -->
                             </div>
                           </div>
                           <div class="empslide empslide5">
                             <div class="emp-slide-content">
-                              <!-- <span>Image Three</span> -->
                             </div>
                           </div>
                           <div class="empslide empslide6">
                             <div class="emp-slide-content">
-                              <!-- <span>Image Three</span> -->
                             </div>
                           </div>
                         </div>
@@ -889,21 +1162,19 @@
                 <div class="locwrap">
                     <div id="locarrow-left" class="locarrow"></div>
                     <div id="locslider">
-                    <div class="locslide locslide1">
+                    <!-- <div class="locslide locslide1">
                         <div class="locslide-content">
-                        <!-- <span>Image One</span> -->
                         </div>
-                    </div>
+                    </div> -->
                     <div class="locslide locslide2">
                         <div class="locslide-content">
                         <!-- <span>Image Two</span> -->
                         </div>
                     </div>
-                    <div class="locslide locslide3">
+                    <!-- <div class="locslide locslide3">
                         <div class="locslide-content">
-                        <!-- <span>Image Three</span> -->
                         </div>
-                    </div>
+                    </div> -->
                     <div class="locslide locslide4">
                         <div class="locslide-content">
                         <!-- <span>Image Three</span> -->
@@ -960,7 +1231,7 @@
                 <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr.png" alt="">
             </div>
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr2v2.png" alt="">  
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr3.png" alt="">  
             </div>
         </div>
 
@@ -1001,11 +1272,10 @@
                         <!-- <span>Image One</span> -->
                         </div>
                     </div>
-                    <div class="traslide traslide2">
+                    <!-- <div class="traslide traslide2">
                         <div class="traslide-content">
-                        <!-- <span>Image Two</span> -->
                         </div>
-                    </div>
+                    </div> -->
                     <div class="traslide traslide3">
                         <div class="traslide-content">
                         <!-- <span>Image Three</span> -->
@@ -1234,7 +1504,7 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <div id="signUpForm">
+                    <!-- <div id="signUpForm">
                         <div role="form" class="wpcf7" id="wpcf7-f276-o1" dir="ltr">
                           <div class="screen-reader-response"></div>
                           <form action="/#wpcf7-f276-o1" method="post" class="wpcf7-form" novalidate="novalidate">
@@ -1245,13 +1515,9 @@
                               <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f276-o1">
                               <input type="hidden" name="_wpnonce" value="3da6ca0018"></div>
                       
-                            <!---------------------------------------------------------------->
-                            <!----------ADD THIS IN CONTACT FORM 7 ABOVE INPUTS/LABELS-------->
-                            <!---------------------------------------------------------------->
+
                             <div class="contact-button">Napisz do nas <span class="form-arrow">&#9650;</span></div>
-                            <!----------------------------------------------------------------->
-                            <!----------------------------------------------------------------->
-                            <!----------------------------------------------------------------->
+    
                       
                             <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Imię i Nazwisko"></span><br>
                               <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span><br>
@@ -1265,7 +1531,7 @@
                             <div class="wpcf7-response-output wpcf7-display-none"></div>
                           </form>
                         </div>
-                      </div>  
+                      </div>   -->
                     <form id="contact" action="" method="post">
                         <div class="row">
                             <div class="col-sm-12 col-md-12">
@@ -1275,7 +1541,7 @@
                                 <div class="col-sm-10 col-md-10" style="text-align: left; padding: 0;"> 
                                  <span style="color: aliceblue; font-size: 15px;">Siedziba firmy</span>
                                  <p style="color: #72DE15; font-size: 20px;">Ul. Międzyrzecka 5
-                                    65-001 Zielona Góra
+                                    65-127 Zielona Góra
                                  </p>
                                  </div>
                             </div>
@@ -1357,9 +1623,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; 2022 KALISZ COMPANY xD
+                    <p>Copyright &copy; 2023 KALISZ COMPANY xD
 
-                        - <a rel="nofollow" href="https://kali82.github.io/portfolio/" target="_parent">TMAS</a>
+                        - <a rel="nofollow" href="https://kali82.github.io/tmas/" target="_parent">TMAS.PL</a>
                         by <a rel="nofollow" href="https://kali82.github.io/portfolio/" target="_parent">Kalisz</a></p>
                 </div>
             </div>
