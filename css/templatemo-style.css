@@ -820,17 +820,16 @@ body {
   margin-right: auto;
 }
 .image-repeter-5 {
-  background-size: cover;
   margin-top: 20px;
   margin-bottom: 20px;
   background-image: url("../img/serwisBigPhoto.JPG");
-
   background-repeat: no-repeat;
   background-position: center;
   height: 60vh;
   width: 100% !important;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
 }
 .image-repeter-6 {
   background-size: cover !important;
