@@ -12,6 +12,26 @@ https://templatemo.com/tm-513-avalon
   font-family: "Open Sans", arial, sans-serif;
 }
 
+/* SCROLLBAR */
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-image: url("../img/highway.png");
+  background-position-x: -15px;
+  background-repeat: repeat-y;
+  background-size: 50px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-image: url("../img/scroll.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
 /* HISTORIA 2021 */
 #his4Slider,
 .his4-wrap,
