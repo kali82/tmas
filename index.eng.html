@@ -20,6 +20,47 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.querySelector("#gallery");
+            var getVal = function (elem, style) {
+            return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
+            };
+            var getHeight = function (item) {
+            return item.querySelector(".content").getBoundingClientRect().height;
+            };
+            var resizeAll = function () {
+            var altura = getVal(gallery, "grid-auto-rows");
+            var gap = getVal(gallery, "grid-row-gap");
+            gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+                var el = item;
+                el.style.gridRowEnd =
+                "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+            });
+            };
+            gallery.querySelectorAll("img").forEach(function (item) {
+           // item.classList.add("byebye");
+            // if (item.complete) {
+            //   console.log(item.src);
+            // } else {
+            //item.addEventListener("load", function () {
+                var altura = getVal(gallery, "grid-auto-rows");
+                var gap = getVal(gallery, "grid-row-gap");
+                var gitem = item.parentElement.parentElement;
+                gitem.style.gridRowEnd =
+                "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove("byebye");
+           // });
+            // }
+            });
+            window.addEventListener("resize", resizeAll);
+            gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+            item.addEventListener("click", function () {
+                item.classList.toggle("full");
+            });
+             });
+            });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
             if (window.scrollY === 0) {
               var dynamicStyle = document.getElementById("dynamic-css");
               if (!dynamicStyle) {
@@ -547,16 +588,16 @@
         
         <nav id="nav-main">    
           <ul>
-            <li><a onclick="document.getElementById('burger').click(); xd(); scrollToTargetAdjusted('historiaID')">O NAS</a>
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span> Nasza Historia</a></li>
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('zasiegiID')"><span class="arrow-menu-item">&#10551;</span>  Zasięgi Działalności</a></li>
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item">&#10551;</span>  Pracownicy</a></li>
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('flotaID')"><span class="arrow-menu-item">&#10551;</span>  Flota</a></li>
-                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('siedzibaID')"><span class="arrow-menu-item">&#10551;</span>  Siedziba</a></li>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')">O NAS</a>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span> Our History</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('zasiegiID')"><span class="arrow-menu-item">&#10551;</span>  Activity Range</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item">&#10551;</span>  Workers</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('flotaID')"><span class="arrow-menu-item">&#10551;</span>  Our Fleet</a></li>
+                <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('siedzibaID')"><span class="arrow-menu-item">&#10551;</span>  Company Headquarters</a></li>
             </li>
             <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')">OFERTA</a>
                 <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')"><span class="arrow-menu-item">&#10551;</span>  Transport</a></li>
-                <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('serwisID')"><span class="arrow-menu-item">&#10551;</span>  Serwis Tir</a></li>
+                <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('serwisID')"><span class="arrow-menu-item">&#10551;</span>  Truck Service</a></li>
  
             </li>
             <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('galeriaID')">GALERIA</a></li>
@@ -581,11 +622,11 @@
                 <div style="text-align: center;" class="col-details">
                     <h3>O NAS</h3>
                     <ul>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"><span class="arrow-menu-item-main">&#10551;</span><span data-translate="Our History">Nasza Historia</span></li>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('zasiegiID');"><span class="arrow-menu-item-main">&#10551;</span>Zasięgi Działalności</li>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item-main">&#10551;</span>Pracownicy</li>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('flotaID');"><span class="arrow-menu-item-main">&#10551;</span>Flota</li>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('siedzibaID');"><span class="arrow-menu-item-main">&#10551;</span>Siedziba</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('historiaID');"><span class="arrow-menu-item-main">&#10551;</span><span data-translate="Our History">Our History</span></li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('zasiegiID');"><span class="arrow-menu-item-main">&#10551;</span>Activity Range</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item-main">&#10551;</span>Workers</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('flotaID');"><span class="arrow-menu-item-main">&#10551;</span>Our Fleet</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('siedzibaID');"><span class="arrow-menu-item-main">&#10551;</span>Company Headquarters</li>
                     </ul>
                     <div class="about-button"> <img src="./arrow-232.png" alt="">
                     </div>
@@ -599,7 +640,7 @@
                     <h3>OFERTA</h3>
                     <ul>
                         <li onclick="event.stopPropagation(); scrollToTargetAdjusted('transportID');"><span class="arrow-menu-item-main">&#10551;</span> Transport</li>
-                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('serwisID');"><span class="arrow-menu-item-main">&#10551;</span> Serwis Tir</li>
+                        <li onclick="event.stopPropagation(); scrollToTargetAdjusted('serwisID');"><span class="arrow-menu-item-main">&#10551;</span> Truck Service</li>
                     </ul>
                     <div class="about-button"> <img src="./arrow-232.png" alt="">
                     </div>
@@ -686,7 +727,7 @@
     <div id="historiaID" class="timeline-container">
         <div class="ag-timeline-block">
             <div class="ag-timeline_title-box title">
-                <div class="ag-timeline_tagline">Nasza Historia</div>
+                <div class="ag-timeline_tagline">Our History</div>
                 <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
@@ -727,7 +768,7 @@
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">1993</div>
                                             <div class="ag-timeline-card_desc">
-                                                W 1992 roku zrodziła się myśl założenia firmy transportowej. Po zrobieniu krótkiego rozeznania, w 1993 roku na celownik padło piękne pięcioletnie Volvo f12, po które wybraliśmy się aż do Szwecji. Konieczne okazało się więc znalezienie partnerki do pracy dla wyżej wymienionego ciągnika siodłowego. W Hamburgu wypatrzyliśmy naczepę kurtynę. Zdecydowaliśmy się rozpocząć pracę i zatrudnić pierwszego kierowcę, któremu został powierzony nowo zakupiony nabytek. Udało się też wynająć niewielki plac na obrzeżach Zielonej Góry, który na kolejne 6 lat stał się naszą bazą. I tak rozpoczęła się nasza historia.
+                                                In 1992 was the first time that there appeared the idea of ​​establishing a transport company. After short research, in 1993 the beautiful five-year-old Volvo f12 was targeted. We went all the way to Sweden to buy it. Shortly after, in Hamburg, we found the perfect work partner for our truck – a curtain semi trailer. We decided to start our work and hire the first driver who was entrusted with the newly purchased set. We also managed to rent a small square on the outskirts of Zielona Góra, where we settled down for the next 6 years. That’s how our story had begun.
                                             </div>
                                         </div>
                                     </div>
@@ -767,8 +808,7 @@
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">1995</div>
                                             <div class="ag-timeline-card_desc">
-                                                W 1995 roku całkowity przypadek sprawił, że na naszej drodze pojawili się przedstawiciele firmy związanej z branżą produkującą koagulanty. Zaryzykowaliśmy więc kupując naszą pierwszą cysternę i rozszerzyliśmy działalność wchodząc tym samym na rynek transportu płynnej chemii 8 klasy ADR.  Od tego czasu nasza działalność skoncentrowała się głównie na tym polu i tak pozostaje aż do dnia dzisiejszego.
-                                            </div>
+                                                In 1995, by an accident, we met people working for the company related to the coagulants industry. Just because of them, we decided to take a risk – we bought our first tanker and entered the market of the transport of liquid chemicals of the 8th ADR class. Since then, our activity has focused mainly on this field and it has been like that until today.                                            </div>
                                         </div>
                                     </div>
                                     <div class="ag-timeline-card_arrow"></div>
@@ -809,8 +849,7 @@
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">1999</div>
                                             <div class="ag-timeline-card_desc">
-                                                Wraz z rozwojem firmy zapadła decyzja o zaprzestaniu wynajmowania placu postojowego i zakupie własnej działki pod przyszłą bazę. Od podstaw zbudowaliśmy halę z dwoma stanowiskami do napraw pojazdów i niewielki biurowy budynek z zapleczem socjalnym. Miejsce to, stało się domem dla naszej firmy na kolejne ponad dwadzieścia lat
-                                            </div>
+                                                With the development of the company, we made the decision to buy a parking place and to stop renting the previous one. We built a hall with two repair stands for vehicles and a small office building. This place has become a home for our company for next more than twenty years.                                            </div>
                                         </div>
                                     </div>
                                     <div class="ag-timeline-card_arrow"></div>
@@ -855,8 +894,7 @@
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">2021</div>
                                             <div class="ag-timeline-card_desc">
-                                                Ostatecznie, w miarę upływu czasu, ze względu na zatrudnienie większej ilości pracowników, zwiększenie floty oraz na zmianę obowiązujących standardów, niezbędna stała się zmiana siedziby. Teraz dysponujemy obszernym utwardzonym placem postojowym oraz nowoczesnym, dużym budynkiem, który zapewnia nam nieporównywalnie wyższy komfort pracy. Przeprowadzka była dla nas jednym z większych kroków milowych. W końcu osiągnęliśmy cel, na który tak długo pracowaliśmy. Daje to motywację na kolejne lata... 
-                                            </div>
+                                                Eventually, with the passage of time, due to the increase in the number of employees and vehicles, and also because of standards changes, we had to change the headquarters. Now we have a spacious parking and a modern, large building, what give us much higher comfort of work. This movement was one of the biggest milestones for us. We have finally achieved the goal for which we have worked for so long. This gives motivation for the coming years.                                            </div>
                                         </div>
                                     </div>
                                     <div class="ag-timeline-card_arrow"></div>
@@ -873,7 +911,7 @@
         <div class="map-container">
             <div class="map-content">
                 <div class="map-title title">
-                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Zasięgi Działalności</div>
+                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Activity Range</div>
                     <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                     <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
                 </div>
@@ -882,11 +920,9 @@
                     padding: 10px;
                     background: #302E2E;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
-                        Obsługujemy klientów z terenu całej Unii Europejskiej. Z usług korzystają m.in. czołowe europejskie firmy z branży chemicznej.
-Przede wszystkim jeździmy po terenach: Niemiec, Czech, Słowacji, Węgier, Litwy, Łotwy, Estonii, Szwecji i Danii, a także Austrii, Holandii, Belgii i Włoch. 
-
-Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno krajowym, jak i międzynarodowym, świadczymy w pełni profesjonalne usługi, zdobywając uznanie i zaufanie klientów z całej Europy.
-
+                        We work with the customers from all over the European Union. 
+                        Mainly, we travel around: Germany, Czech Republic, Slovakia, Hungary, Lithuania, Latvia, Estonia, Sweden and Denmark as well as Austria, the Netherlands, Belgium and Italy.
+                        Our employees are very experienced in working on the domestic and international market. That’s why, we provide fully professional services and we have gained the trust of customers from all over the Europe.
                     </p>
                 </div>
             </div>
@@ -901,7 +937,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
     <div class="container mb-5 pb-lg-5" id="pracownicyID">
         <div class="row">        
             <div class="col-12 title">
-                <h2 class="mb-3 employees-title" data-aos="fade-up">Pracownicy</h2>
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Workers</h2>
                 <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
@@ -909,18 +945,19 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <div class="col-lg-6 col-12 mt-3 mb-lg-5">
                 <p class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="300" style="color: darkgray !important; font-size: large !important;   border-radius: 20px;
                 padding: 10px;
-                background: #302E2E;">Nasi pracownicy to grono zaufanych i doświadczonych ludzi. Wszyscy dysponują zaświadczeniem ADR, stale przechodzą odpowiednie szkolenia i zdają niezbędne egzaminy. Posiadają również dodatkowe uprawnienia, umożliwiające obsługę stacjonarnych urządzeń załadowczych i rozładowczych.
-                    Dokładamy wszelkich starań, by  podwyższać ich kompetencje. 
-                    Ponadto specyfika i charakter przewożonych produktów wymagają stałego nadzoru doradcy do spraw bezpieczeństwa przy przewozie towarów niebezpiecznych. W naszym gronie mamy do dyspozycji taką osobę, dzięki czemu w każdej chwili możemy zasięgnąć opinii specjalisty.
+                background: #302E2E;">Our employees are a group of trusted and experienced people. They all have an ADR certificate, constantly undergo appropriate training and pass many exams.
+We make every effort to constantly increase their competences.
+                    <br> <br>Moreover, the specificity and nature of the products, that we transport, requires to be constantly supervised by a safety advisor for the transport of dangerous goods. We have such a person at our disposal, so we can consult to a specialist at any time.
                     </p>
             </div>
 
             <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
                 <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: large !important;  border-radius: 20px;
                 padding: 10px;
-                background: #302E2E;"> Nasz zespół wyróżnia się przede wszystkim zaangażowaniem. To grupa ludzi zdolna do poświęceń, wyrzeczeń i ciężkiej pracy. Dzięki ich fachowości możemy świadczyć usługi na wysokim poziomie już od ponad 30 lat. 
-                    Oni stanowią największą siłę firmy. 
-                    Im zawdzięczamy nasz sukces.</p>
+                background: #302E2E;"> Our employees are so committed to what they do. 
+They are a group of people, who are able to sacrifice and hard work. Thanks to their professionalism, we have been providing services at the highest level for almost 30 years. 
+                    <br> They are the company's greatest strength. 
+                    <br>We owe them our success.</p>
                     <div class="emp-wrap">
                         <div id="emp-arrow-left" class="emp-arrow"></div>
                         <div id="empSlider" style="border-radius: 20px;">
@@ -956,7 +993,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
         <div class="map-container">
             <div class="map-content">
                 <div class="map-title title">
-                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Flota</div>
+                    <div class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Our Fleet</div>
                     <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                     <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
                 </div>
@@ -965,19 +1002,20 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                     padding: 10px;
                     background: #302E2E;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
-                        Do dyspozycji mamy 20 ciągników marki Volvo oraz DAF spełniających normę EURO 6, oraz 21 cystern producentów Vocol, VanHool, GOFA, Feldbinder, Hendricks.
+                        We have 20 trucks (Volvo and DAF) with Euro 6 emissions standards, and 21 semi-trailer tanks manufactured by Vocol, VanHool, GOFA, Feldbinder, Hendricks.
+
 
                     </p>
                 </div>
                 
                 <div class="single">
-                    <div style="border: 2px solid chartreuse; margin-bottom: 10px; border-radius: 20px;" class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Jednokomorowe</div>
+                    <div style="border: 2px solid chartreuse; margin-bottom: 10px; border-radius: 20px;" class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Single-Compartment</div>
                     <div class="map-text">
                         <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large; color: darkgray !important;   border-radius: 20px;
                         padding: 10px;
                         background: #302E2E;"
                             class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                            CYSTERNA GUMOWANA
+                            RUBBERIZED
                         </p>
                         
                     </div>
@@ -986,13 +1024,14 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                     </div>
                 </div>
                 <div class="multi">
-                    <div style="border: 2px solid chartreuse; margin-bottom: 20px; margin-top: 30px;border-radius: 20px;" class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Wielokomorowe</div>
+                    <div style="border: 2px solid chartreuse; margin-bottom: 20px; margin-top: 30px;border-radius: 20px;" class="ag-timeline_tagline" data-aos="fade-up" data-aos-delay="300">Multi-Compartment 
+                    </div>
                     <div class="map-text">
                         <p style="width: 90%;margin: auto; margin-bottom: 10px; font-size: x-large; color: darkgray !important;  border-radius: 20px;
                         padding: 10px;
                         background: #302E2E;"
                             class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                            4 - KOMOROWA
+                            4 - CHAMBER
                         </p>
                         
                     </div>
@@ -1004,7 +1043,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         padding: 10px;
                         background: #302E2E;"
                             class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                            3 - KOMOROWA GUMOWANA
+                            3 - CHAMBER RUBBERIZED
                         </p>
                         
                     </div>
@@ -1016,7 +1055,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         padding: 10px;
                         background: #302E2E;"
                             class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                            3 - KOMOROWA 
+                            3 - CHAMBER 
                         </p>
                         
                     </div>
@@ -1028,7 +1067,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         padding: 10px;
                         background: #302E2E;"
                             class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                            3 - KOMOROWA 
+                            3 - CHAMBER 
                         </p>
                         
                     </div>
@@ -1041,8 +1080,8 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                     padding: 10px;
                     background: #302E2E;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="1000">
-                        W celu zapewnienia usług na najwyższym poziomie w każdym z aut zamontowany jest system GPS. Umożliwia on monitorowanie floty w czasie rzeczywistym i podaje lokalizację z kompleksowymi danymi. Przesyła także informacje z tachografu cyfrowego, co znacząco wpływa na dalsze planowanie pracy i bezpieczeństwo na drodze. Dzięki takim rozwiązaniom, mamy sposobność transportować towary objęte systemem SENT.
-                        Nasza flota jest na bieżąco odmładzana, a grupa zaufanych mechaników czuwa nad utrzymaniem jej w dobrej kondycji. Dzięki temu, możemy zapewnić, że nasz sprzęt jest zawsze gotowy do pracy i spełnia wszelkie normy niezbędne do przewożenia tak wymagających ładunków.
+                        In order to provide services at the highest level, the GPS system is installed in every car. It enables real-time monitoring of our fleet and gives us exact location and complex data. It also transmits information from a digital tachograph, what ensures the safety on the road and helps with planning the work. Thanks to such solutions, we also have the opportunity to transport so-called “sensitive goods” using the SENT (System for Electronic Transport Supervision) IT system.
+                        <br><br>Our fleet is being constantly rejuvenated. Older trucks are replaced by new ones. A group of trustworthy mechanics keeps the fleet in a good condition. That’s why, we ensure that our equipment is always ready to work and meets all the standards needed to transport such demanding loads.
                         
                     </p>
                     
@@ -1088,7 +1127,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
     <div class="container mb-5 pb-lg-5" id="siedzibaID">
         <div class="row">        
             <div class="col-12 title">
-                <h2 class="mb-3 employees-title" data-aos="fade-up">Siedziba</h2>
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Company Headquarters</h2>
                 <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
@@ -1099,7 +1138,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
                 <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: large;  border-radius: 20px;
                 padding: 10px;
-                background: #302E2E;"> Siedziba firmy mieści się na terenie Strefy Aktywności Gospodarczej w Zielonej Górze. Dysponujemy nowoczesnym budynkiem wraz z całodobowo monitorowanym placem. Do własnego użytku mamy również stację paliw oraz myjnię samochodów ciężarowych wyposażoną w głowicę umożliwiającą mycie cystern wewnątrz. Na terenie obiektu mieści się też dwustanowiskowy warsztat.</p>
+                background: #302E2E;"> The headquarters of our company are located in the Zielona Góra’s Economic Activity Zone. We have a modern building with a 24/7 monitored area. For our own use, we also have an Ad-Blue and ON petrol station and a truck wash equipped with a head, that allows to wash tanks inside. We have a two-station repair workshop too.</p>
                 <div class="locwrap">
                     <div id="locarrow-left" class="locarrow"></div>
                     <div id="locslider" style="border-radius: 20px;">
@@ -1123,6 +1162,10 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         <div class="locslide-content">
                         </div>
                     </div>
+                    <div class="locslide locslide8">
+                        <div class="locslide-content">
+                        </div>
+                    </div>
                     </div>
                     <div id="locarrow-right" class="locarrow"></div>
                 </div>   
@@ -1140,53 +1183,60 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <div class="col-lg-6 col-12 mt-3 mb-lg-5" style="border-radius: 20px;
             padding: 10px;
             background: #302E2E;">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important;"> Specjalizujemy się w przewozach wąskiej grupy materiałów niebezpiecznych klasy 8 ADR.<br>Towar stanowi płynna chemia, w tym: </p>
-                <ul style="color: darkgray !important; font-size: large;">
-                    <li data-aos="fade-up" data-aos-delay="600"> <span style="color: #72DE15;">&#10551;</span> UN 1134 – chlorobenzen</li>
-                    <li data-aos="fade-up" data-aos-delay="700"> <span style="color: #72DE15;">&#10551;</span> UN 1719 – materiał żrący ciekły zasadowy i.n.o.</li>
-                    <li data-aos="fade-up" data-aos-delay="800"> <span style="color: #72DE15;">&#10551;</span> UN 1789 – kwas chlorowodorowy (kwas solny)</li>
-                    <li data-aos="fade-up" data-aos-delay="900"> <span style="color: #72DE15;">&#10551;</span> UN 1778 – kwas fluorokrzemowy</li>
-                    <li data-aos="fade-up" data-aos-delay="1000"> <span style="color: #72DE15;">&#10551;</span> UN 1791 – podchloryn</li>
-                    <li data-aos="fade-up" data-aos-delay="1100"> <span style="color: #72DE15;">&#10551;</span> UN 1805 – kwas fosforowy</li>
-                    <li data-aos="fade-up" data-aos-delay="1200"> <span style="color: #72DE15;">&#10551;</span> UN 1814 – wodorotlenek potasu</li>
-                    <li data-aos="fade-up" data-aos-delay="1300"> <span style="color: #72DE15;">&#10551;</span> UN 1819 – glinian sodu</li>
-                    <li data-aos="fade-up" data-aos-delay="1400"> <span style="color: #72DE15;">&#10551;</span> UN 1824 – wodorotlenek sodu</li>
-                    <li data-aos="fade-up" data-aos-delay="1500"> <span style="color: #72DE15;">&#10551;</span> UN 1830 – kwas siarkowy</li>
-                    <li data-aos="fade-up" data-aos-delay="1600"> <span style="color: #72DE15;">&#10551;</span> UN 1832 – kwas siarkowy zużyty</li>
-                    <li data-aos="fade-up" data-aos-delay="1700"> <span style="color: #72DE15;">&#10551;</span> UN 1840 – chlorek cynku</li>
-                    <li data-aos="fade-up" data-aos-delay="1800"> <span style="color: #72DE15;">&#10551;</span> UN 2031 – kwas azotowy</li>
-                    <li data-aos="fade-up" data-aos-delay="1900"> <span style="color: #72DE15;">&#10551;</span> UN 2581 – chlorek glinu</li>
-                    <li data-aos="fade-up" data-aos-delay="2000"> <span style="color: #72DE15;">&#10551;</span> UN 2582 – chlorek żelaza</li>
-                    <li data-aos="fade-up" data-aos-delay="2100"> <span style="color: #72DE15;">&#10551;</span> UN 2796 – kwas siarkowy</li>
-                    <li data-aos="fade-up" data-aos-delay="2200"> <span style="color: #72DE15;">&#10551;</span> UN 3082 – materiał zagrażający środowisku ciekły i.n.o.</li>
-                    <li data-aos="fade-up" data-aos-delay="2300"> <span style="color: #72DE15;">&#10551;</span> UN 3264 – materiały żrące ciekłe kwaśne nieorganiczne i.n.o. - w tym odpady</li>
-                    <li data-aos="fade-up" data-aos-delay="2400"> <span style="color: #72DE15;">&#10551;</span> UN 3266 – materiał żrący ciekły zasadowy nieorganiczny i.n.o. - w tym odpady</li>
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important;"> We specialize in the transport of a narrow group of dangerous materials, belonging to the 8th class according to the ADR convention. We can also carry some 3rd and 9th class substances.
+                    <br>The commodity is liquid chemicals, incl:
+                     </p>
+                <ul data-aos="fade-right" data-aos-delay="600" style="color: darkgray !important; font-size: large;">
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1134 – chlorobenzene</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1719 – caustic alkali liquid, n.o.s</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1789 – hydrochloric acid</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1778 – fluorosilicic acid</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1791 – hypochlorite solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1805 – phosphoric acid, solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1814 – potassium hydroxide solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1819 – sodium aluminate solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1824 – sodium hydroxide solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1830 – sulphuric acid</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1832 – sulphuric acid, spent</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 1840 – zinc chloride solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 2031 – nitric acid</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 2581 – aluminium chloride solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 2582 – ferric chloride solution</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 2796 – sulphuric acid</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 3082 – environmentally hazardous substance, liquid, n.o.s.</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 3264 – corrosive liquid, acidic, inorganic, n.o.s. – including chemical waste</li>
+                    <li > <span style="color: #72DE15;">&#10551;</span> UN 3266 – corrosive liquid, basic, inorganic, n.o.s. – including chemical waste</li>
                   </ul>
             </div>
 
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5" >
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr.png" alt="">
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="500" src="./img/adr.png" alt="">
             </div>
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr3.png" alt="">  
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="500" src="./img/adr3.png" alt="">  
             </div>
         </div>
 
         <div class="row">
             <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;border-radius: 20px;
             padding: 10px;
-            background: #302E2E;"> Nasza firma figuruje w bazie danych o produktach i opakowaniach oraz o gospodarce odpadami (BDO) pod indywidualnym numerem rejestrowym 000008710. </p>
+            background: #302E2E;    margin-left: auto;
+    margin-right: auto;"> We have well trained employees and specialized equipment. Thanks to that, every order is carried out with utmost care and at the highest level. 
+Knowledge and experience guarantee safe, fast and reliable transport. 
+ </p>
   
             <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;border-radius: 20px;
             padding: 10px;
-            background: #302E2E;">Wszystkie nasze ładunki są ubezpieczone w ramach odpowiedzialności cywilnej przewoźnika OCP.</p>
-            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;   border-radius: 20px;
+            background: #302E2E;    margin-left: auto;
+    margin-right: auto;">All our loads are insured under carrier's liability insurance in domestic transport.</p>
+            <!-- <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;   border-radius: 20px;
             padding: 10px;
             background: #302E2E;">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.
-            </p>
+            </p> -->
             <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;border-radius: 20px;
             padding: 10px;
-            background: #302E2E;">W celu uzyskania szczegółowych informacji zapraszamy do kontaktu. 
+            background: #302E2E;    margin-left: auto;
+    margin-right: auto;">Please contact us for more information. 
             </p>
 
         </div>
@@ -1194,18 +1244,18 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
         <div class="container">
             <div class="row" >
               <div class="col">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1500">
-                    <span>30 lat</span> <br> doświadczenia
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1500" style="font-family: cursive;">
+                    <span style="display: flow; font-family: cursive;" >30 years</span>  <br> experience <br><br>
                 </div>      
               </div>
               <div class="col">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1600">
-                    <span>Miliony</span> <br> przejechanych <br> kilometrów
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1600" style="font-family: cursive;">
+                    <span style="display: flow;font-family: cursive;">Millions</span> <br> od kilometers traveled
                 </div>    
               </div>
               <div class="col ">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1700">
-                    <span>Dziesiątki</span> <br> zadowolonych <br> klientów
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1700" style="font-family: cursive;">
+                    <span style="display: flow;font-family: cursive;">Dozens</span> <br> od satisfied customers
                 </div>    
               </div>
             </div>
@@ -1214,7 +1264,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
         <div class="row">
             <p style="margin-left: 70px; margin-right: 70px; color: darkgray !important; font-size: large;   border-radius: 20px;
             padding: 10px;
-            background: #302E2E;" class="employees-left-text" data-aos="fade-up" data-aos-delay="1100">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.</p>
+            background: #302E2E;" class="employees-left-text" data-aos="fade-up" data-aos-delay="100">We have trained staff and specialised equipment to ensure that each of our orders is carried out with the utmost care and to the highest standard. Knowledge and experience gained over many years and deepened with every kilometre travelled will guarantee safe, fast and reliable transport.</p>
             <div class="trawrapper" style="width: 60%; margin: auto;   border-radius: 20px;
             ">
                 <div class="trawrap">
@@ -1260,33 +1310,39 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
     <div class="container mb-5 pb-lg-5" id="serwisID">
         <div class="row">        
             <div class="col-12 title">
-                <h2 class="mb-3 employees-title" data-aos="fade-up">Serwis Tir</h2>
+                <h2 class="mb-3 employees-title" data-aos="fade-up">Truck Service</h2>
                 <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                 <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
             </div>
             <div style="font-size: 20px;   border-radius: 20px;
             padding: 10px;
             background: #302E2E;" class="col-lg-6 col-12 mt-3 mb-lg-5">
-                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: larger;"> Świadczymy kompleksowe usługi w zakresie: </p>
+                <p class="employees-left-text" data-aos="fade-up" data-aos-delay="500" style="color: darkgray !important; font-size: larger;"> We provide services in the field of: </p>
                 <ul style="color: darkgray !important;">
-                    <li data-aos="fade-up" data-aos-delay="600"> <span style="color: #72DE15;">&#10551;</span> mechaniki ogólnej</li>
-                    <li data-aos="fade-up" data-aos-delay="700"> <span style="color: #72DE15;">&#10551;</span> komputerowej diagnostyki samochodów ciężarowych, naczep, przyczep</li>
-                    <li data-aos="fade-up" data-aos-delay="800"> <span style="color: #72DE15;">&#10551;</span> naprawy silników</li>
-                    <li data-aos="fade-up" data-aos-delay="900"> <span style="color: #72DE15;">&#10551;</span> naprawy skrzyń biegów</li>
-                    <li data-aos="fade-up" data-aos-delay="1000"><span style="color: #72DE15;">&#10551;</span> naprawy mostów</li>
-                    <li data-aos="fade-up" data-aos-delay="1100"><span style="color: #72DE15;">&#10551;</span> układów wydechowych</li>
-                    <li data-aos="fade-up" data-aos-delay="1200"><span style="color: #72DE15;">&#10551;</span> układów AdBlue</li>
-                    <li data-aos="fade-up" data-aos-delay="1300"><span style="color: #72DE15;">&#10551;</span> układów hamulcowych</li>
-                    <li data-aos="fade-up" data-aos-delay="1400"><span style="color: #72DE15;">&#10551;</span> układów zasilania</li>
-                    <li data-aos="fade-up" data-aos-delay="1500"><span style="color: #72DE15;">&#10551;</span> układów klimatyzacji</li>
-                    <li data-aos="fade-up" data-aos-delay="1600"><span style="color: #72DE15;">&#10551;</span> diagnostyki i naprawy instalacji ogrzewania</li>
-                    <li data-aos="fade-up" data-aos-delay="1700"><span style="color: #72DE15;">&#10551;</span> serwisu olejowego</li>
-                    <li data-aos="fade-up" data-aos-delay="1800"><span style="color: #72DE15;">&#10551;</span> serwisu opon i wulkanizacji</li>
-                    <li data-aos="fade-up" data-aos-delay="1900"><span style="color: #72DE15;">&#10551;</span> ozonowanie kabin</li>
+                    <li data-aos="fade-up" data-aos-delay="600"> <span style="color: #72DE15;">&#10551;</span> general mechanics</li>
+                    <li data-aos="fade-up" data-aos-delay="700"> <span style="color: #72DE15;">&#10551;</span> computer diagnostics of trucks, trailers and semi-trailers</li>
+                    <li data-aos="fade-up" data-aos-delay="800"> <span style="color: #72DE15;">&#10551;</span> engine repair</li>
+                    <li data-aos="fade-up" data-aos-delay="900"> <span style="color: #72DE15;">&#10551;</span> gearbox repair</li>
+                    <li data-aos="fade-up" data-aos-delay="1000"><span style="color: #72DE15;">&#10551;</span> drive axle repair</li>
+                    <li data-aos="fade-up" data-aos-delay="1100"><span style="color: #72DE15;">&#10551;</span> exhaust system</li>
+                    <li data-aos="fade-up" data-aos-delay="1200"><span style="color: #72DE15;">&#10551;</span> AdBlue system</li>
+                    <li data-aos="fade-up" data-aos-delay="1300"><span style="color: #72DE15;">&#10551;</span> brake system</li>
+                    <li data-aos="fade-up" data-aos-delay="1400"><span style="color: #72DE15;">&#10551;</span> power system</li>
+                    <li data-aos="fade-up" data-aos-delay="1500"><span style="color: #72DE15;">&#10551;</span> air conditioning system</li>
+                    <li data-aos="fade-up" data-aos-delay="1600"><span style="color: #72DE15;">&#10551;</span> diagnostics and repair of heating system</li>
+                    <li data-aos="fade-up" data-aos-delay="1700"><span style="color: #72DE15;">&#10551;</span> oil service</li>
+                    <li data-aos="fade-up" data-aos-delay="1800"><span style="color: #72DE15;">&#10551;</span> tire service and vulcanisation</li>
+                    <li data-aos="fade-up" data-aos-delay="1900"><span style="color: #72DE15;">&#10551;</span> cabin ozonation</li>
                   </ul>
+                  <p class="employees-left-text" data-aos="fade-right" data-aos-delay="2100" style="color: darkgray !important;border-radius: 20px;
+                  padding: 10px;
+                  background: #302E2E;">Feel free to contact us <br>
+                                          tel.: 665 110 200 <br>
+                                          e-mail: serwis@tmas.pl
+                  </p>
             </div>
 
-            <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5">
+            <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5" data-aos="fade-left" data-aos-delay="800">
                     <div class="serwrap" style="">
                         <div id="serarrow-left" class="serarrow"></div>
                         <div id="serslider" style="border-radius: 20px;">
@@ -1327,7 +1383,126 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
 
         </div>
     </div>
-    <section class="galery-image" id="galeriaID">
+    <section class="gal-images" id="galeriaID">
+        <div class="container mb-5 pb-lg-5">
+            <div class="row">        
+                <div class="col-12 title">
+                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Galeria</h2>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+       
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/1.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/2.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/3.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/4.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/5.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/6.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/7.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/8.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/9.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/10.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/11.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/12.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/13.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/14.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/15.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/16.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/17.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/18.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/19.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/20.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/21.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/22.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/23.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/24.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/25.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/26.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/27.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/28.JPG" alt=""></div>
+            </div>
+             <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/29.JPG" alt=""></div>
+            </div>
+
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/30.jpg" alt=""></div>
+            </div>
+
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/31.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/32.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/33.jpg" alt=""></div>
+            </div>  
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/34.jpg" alt=""></div>
+            </div>         
+        </div>
+    </section>
+    <!-- <section class="galery-image" id="galeriaID">
         <div class="container mb-5 pb-lg-5">
             <div class="row">        
                 <div class="col-12 title">
@@ -1432,12 +1607,12 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <img src="./img/gallery/15.JPG" alt="" loading="lazy">
           </li>
       </ul>
-    </section>
+    </section> -->
     <section class="contact-us" id="contact-section">
         <div class="container mb-1 pb-lg-1">
             <div class="row">        
                 <div class="col-12 title">
-                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Kontakt</h2>
+                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Contact</h2>
                     <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
                     <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
                 </div>
@@ -1453,9 +1628,9 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                                     <img style="width: 48px;" src="./img/location/icons8-location-96.png" alt="">
                                 </div>
                                 <div class="col-sm-10 col-md-10" style="text-align: left; padding: 0;"> 
-                                 <span style="color: aliceblue; font-size: 15px;">Siedziba firmy</span>
+                                 <span style="color: aliceblue; font-size: 15px;">Company headquarters</span>
                                  <p style="color: #72DE15; font-size: 20px;">Ul. Międzyrzecka 5
-                                    65-127 Zielona Góra
+                                    65-127 Zielona Góra Poland
                                  </p>
                                  </div>
                             </div>
@@ -1464,7 +1639,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                                     <img style="width: 48px;" src="./img/icons8-phone-96.png" alt="">
                                 </div>
                                 <div class="col-sm-10 col-md-10" style="text-align: left; padding: 0;"> 
-                                 <span style="color: aliceblue; font-size: 15px;">Numer telefonu</span>
+                                 <span style="color: aliceblue; font-size: 15px;">Phone number</span>
                                  <p style="color: #72DE15; font-size: 20px;">+48 601 740 147
                                  </p>
                                  </div>
@@ -1482,7 +1657,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         <div class="" style="text-align: left; padding-left: 60px;" >                       
                             <p style="color: aliceblue; font-size: 15px;">NIP: 929 100 67 03</p>
                             <p style="color: aliceblue; font-size: 15px;">REGON: 970386267</p>
-                            <p style="color: aliceblue; font-size: 18px;">Biuro czynne od poniedziałku do piątku w godzinach 8:00 – 16:00.</p>
+                            <p style="color: aliceblue; font-size: 18px;">Office is open from Monday to Friday between 8am – 4pm.</p>
                         </div> 
                         </div>
                     </form>
@@ -1502,9 +1677,9 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; 2023 KALISZ COMPANY xD
+                    <p>Copyright &copy; 2023 All Rights Reserved
 
-                        - <a rel="nofollow" href="https://kali82.github.io/tmas/" target="_parent">TMAS.PL</a>
+                        - <a rel="nofollow" href="https://tmas.pl" target="_parent">TMAS.PL</a>
                         by <a rel="nofollow" href="https://kali82.github.io/portfolio/" target="_parent">Kalisz</a></p>
                 </div>
             </div>
