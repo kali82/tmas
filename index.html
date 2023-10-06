@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Transport Międzynarodowy Artur Siergiej</title>
     <meta name="description" content="TMAS ZG Transport Miedzynarodowy">
-    <meta name="description" content="Transport Miedzynarodowy Zielona Góra Artur Siergiej ">iedzynarodowy Zielona Góra Artur Siergiej ">
+    <meta name="description" content="Transport Miedzynarodowy Zielona Góra Artur Siergiej ">
     <meta name="description" content="Cysterna ADR Transport chemii płynnej">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -18,6 +18,47 @@
     <link rel="stylesheet" href="css/employees-style.css">
     <link rel="stylesheet" href="css/aos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.querySelector("#gallery");
+            var getVal = function (elem, style) {
+            return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
+            };
+            var getHeight = function (item) {
+            return item.querySelector(".content").getBoundingClientRect().height;
+            };
+            var resizeAll = function () {
+            var altura = getVal(gallery, "grid-auto-rows");
+            var gap = getVal(gallery, "grid-row-gap");
+            gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+                var el = item;
+                el.style.gridRowEnd =
+                "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+            });
+            };
+            gallery.querySelectorAll("img").forEach(function (item) {
+           // item.classList.add("byebye");
+            // if (item.complete) {
+            //   console.log(item.src);
+            // } else {
+            //item.addEventListener("load", function () {
+                var altura = getVal(gallery, "grid-auto-rows");
+                var gap = getVal(gallery, "grid-row-gap");
+                var gitem = item.parentElement.parentElement;
+                gitem.style.gridRowEnd =
+                "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove("byebye");
+           // });
+            // }
+            });
+            window.addEventListener("resize", resizeAll);
+            gallery.querySelectorAll(".gallery-item").forEach(function (item) {
+            item.addEventListener("click", function () {
+                item.classList.toggle("full");
+            });
+             });
+            });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             if (window.scrollY === 0) {
@@ -547,7 +588,7 @@
         
         <nav id="nav-main">    
           <ul>
-            <li><a onclick="document.getElementById('burger').click(); xd(); scrollToTargetAdjusted('historiaID')">O NAS</a>
+            <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')">O NAS</a>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('historiaID')"><span class="arrow-menu-item">&#10551;</span> Nasza Historia</a></li>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('zasiegiID')"><span class="arrow-menu-item">&#10551;</span>  Zasięgi Działalności</a></li>
                 <li class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('pracownicyID')"><span class="arrow-menu-item">&#10551;</span>  Pracownicy</a></li>
@@ -556,7 +597,7 @@
             </li>
             <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')">OFERTA</a>
                 <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('transportID')"><span class="arrow-menu-item">&#10551;</span>  Transport</a></li>
-                <li  class="subpage-menu"><a href="#"><span class="arrow-menu-item">&#10551;</span>  Serwis Tir</a></li>
+                <li  class="subpage-menu"><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('serwisID')"><span class="arrow-menu-item">&#10551;</span>  Serwis Tir</a></li>
  
             </li>
             <li><a onclick="document.getElementById('burger').click(); scrollToTargetAdjusted('galeriaID')">GALERIA</a></li>
@@ -855,7 +896,7 @@
                                         <div class="ag-timeline-card_info">
                                             <div class="ag-timeline-card_title">2021</div>
                                             <div class="ag-timeline-card_desc">
-                                                Ostatecznie, w miarę upływu czasu, ze względu na zatrudnienie większej ilości pracowników, zwiększenie floty oraz na zmianę obowiązujących standardów, niezbędna stała się zmiana siedziby. Teraz dysponujemy obszernym utwardzonym placem postojowym oraz nowoczesnym, dużym budynkiem, który zapewnia nam nieporównywalnie wyższy komfort pracy. Przeprowadzka była dla nas jednym z większych kroków milowych. W końcu osiągnęliśmy cel, na który tak długo pracowaliśmy. Daje to motywację na kolejne lata... 
+                                                Ostatecznie, w miarę upływu czasu, ze względu na zatrudnienie większej liczby pracowników, poszerzenie floty oraz na zmianę obowiązujących standardów, niezbędna stała się zmiana siedziby. Teraz dysponujemy obszernym utwardzonym placem postojowym oraz nowoczesnym, dużym budynkiem, który zapewnia nam nieporównywalnie wyższy komfort pracy. Przeprowadzka była dla nas jednym z większych kroków milowych. W końcu osiągnęliśmy cel, na który tak długo pracowaliśmy. Daje to motywację na kolejne lata... 
                                             </div>
                                         </div>
                                     </div>
@@ -882,7 +923,7 @@
                     padding: 10px;
                     background: #302E2E;"
                         class="zasiegi-text text-blk sub-heading-text" data-aos="fade-up" data-aos-delay="500">
-                        Obsługujemy klientów z terenu całej Unii Europejskiej. Z usług korzystają m.in. czołowe europejskie firmy z branży chemicznej.
+                        Obsługujemy klientów z terenu całej Unii Europejskiej. Z naszych usług korzystają m.in. czołowe europejskie firmy z branży chemicznej.
 Przede wszystkim jeździmy po terenach: Niemiec, Czech, Słowacji, Węgier, Litwy, Łotwy, Estonii, Szwecji i Danii, a także Austrii, Holandii, Belgii i Włoch. 
 
 Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno krajowym, jak i międzynarodowym, świadczymy w pełni profesjonalne usługi, zdobywając uznanie i zaufanie klientów z całej Europy.
@@ -1123,6 +1164,10 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                         <div class="locslide-content">
                         </div>
                     </div>
+                    <div class="locslide locslide8">
+                        <div class="locslide-content">
+                        </div>
+                    </div>
                     </div>
                     <div id="locarrow-right" class="locarrow"></div>
                 </div>   
@@ -1154,21 +1199,21 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                     <li data-aos="fade-up" data-aos-delay="1500"> <span style="color: #72DE15;">&#10551;</span> UN 1830 – kwas siarkowy</li>
                     <li data-aos="fade-up" data-aos-delay="1600"> <span style="color: #72DE15;">&#10551;</span> UN 1832 – kwas siarkowy zużyty</li>
                     <li data-aos="fade-up" data-aos-delay="1700"> <span style="color: #72DE15;">&#10551;</span> UN 1840 – chlorek cynku</li>
-                    <li data-aos="fade-up" data-aos-delay="1800"> <span style="color: #72DE15;">&#10551;</span> UN 2031 – kwas azotowy</li>
-                    <li data-aos="fade-up" data-aos-delay="1900"> <span style="color: #72DE15;">&#10551;</span> UN 2581 – chlorek glinu</li>
-                    <li data-aos="fade-up" data-aos-delay="2000"> <span style="color: #72DE15;">&#10551;</span> UN 2582 – chlorek żelaza</li>
-                    <li data-aos="fade-up" data-aos-delay="2100"> <span style="color: #72DE15;">&#10551;</span> UN 2796 – kwas siarkowy</li>
-                    <li data-aos="fade-up" data-aos-delay="2200"> <span style="color: #72DE15;">&#10551;</span> UN 3082 – materiał zagrażający środowisku ciekły i.n.o.</li>
-                    <li data-aos="fade-up" data-aos-delay="2300"> <span style="color: #72DE15;">&#10551;</span> UN 3264 – materiały żrące ciekłe kwaśne nieorganiczne i.n.o. - w tym odpady</li>
-                    <li data-aos="fade-up" data-aos-delay="2400"> <span style="color: #72DE15;">&#10551;</span> UN 3266 – materiał żrący ciekły zasadowy nieorganiczny i.n.o. - w tym odpady</li>
+                    <li data-aos="fade-up" data-aos-delay="1750"> <span style="color: #72DE15;">&#10551;</span> UN 2031 – kwas azotowy</li>
+                    <li data-aos="fade-up" data-aos-delay="1800"> <span style="color: #72DE15;">&#10551;</span> UN 2581 – chlorek glinu</li>
+                    <li data-aos="fade-up" data-aos-delay="1850"> <span style="color: #72DE15;">&#10551;</span> UN 2582 – chlorek żelaza</li>
+                    <li data-aos="fade-up" data-aos-delay="1900"> <span style="color: #72DE15;">&#10551;</span> UN 2796 – kwas siarkowy</li>
+                    <li data-aos="fade-up" data-aos-delay="1950"> <span style="color: #72DE15;">&#10551;</span> UN 3082 – materiał zagrażający środowisku ciekły i.n.o.</li>
+                    <li data-aos="fade-up" data-aos-delay="2000"> <span style="color: #72DE15;">&#10551;</span> UN 3264 – materiały żrące ciekłe kwaśne nieorganiczne i.n.o. - w tym odpady</li>
+                    <li data-aos="fade-up" data-aos-delay="2000"> <span style="color: #72DE15;">&#10551;</span> UN 3266 – materiał żrący ciekły zasadowy nieorganiczny i.n.o. - w tym odpady</li>
                   </ul>
             </div>
 
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5" >
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr.png" alt="">
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="500" src="./img/adr.png" alt="">
             </div>
             <div class="col-lg-3 col-3 mt-lg-2 mb-lg-5">
-                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="1000" src="./img/adr3.png" alt="">  
+                <img class="me-4 employees-left-text" data-aos="fade-up" data-aos-delay="500" src="./img/adr3.png" alt="">  
             </div>
         </div>
 
@@ -1180,10 +1225,10 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;border-radius: 20px;
             padding: 10px;
             background: #302E2E;">Wszystkie nasze ładunki są ubezpieczone w ramach odpowiedzialności cywilnej przewoźnika OCP.</p>
-            <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;   border-radius: 20px;
+            <!-- <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;   border-radius: 20px;
             padding: 10px;
             background: #302E2E;">Posiadamy wyszkolonych pracowników i specjalistyczny sprzęt, dzięki którym każde z naszych zleceń wykonane jest z najwyższą starannością i na najwyższym poziomie. Wiedza i doświadczenie zdobywane od wielu lat i pogłębiane z każdym kolejnym przejechanym kilometrem, zagwarantuje bezpieczny, szybki i niezawodny transport.
-            </p>
+            </p> -->
             <p class="employees-left-text" data-aos="fade-up" data-aos-delay="1100" style="color: darkgray !important;border-radius: 20px;
             padding: 10px;
             background: #302E2E;">W celu uzyskania szczegółowych informacji zapraszamy do kontaktu. 
@@ -1194,18 +1239,18 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
         <div class="container">
             <div class="row" >
               <div class="col">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1500">
-                    <span>30 lat</span> <br> doświadczenia
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1500" style="font-family: cursive;">
+                    <span style="display: flow; font-family: cursive;" >30 lat</span>  <br> doświadczenia <br><br>
                 </div>      
               </div>
               <div class="col">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1600">
-                    <span>Miliony</span> <br> przejechanych <br> kilometrów
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1600" style="font-family: cursive;">
+                    <span style="display: flow;font-family: cursive;">Miliony</span> <br> przejechanych <br> kilometrów
                 </div>    
               </div>
               <div class="col ">
-                <div class="square-info" data-aos="fade-up" data-aos-delay="1700">
-                    <span>Dziesiątki</span> <br> zadowolonych <br> klientów
+                <div class="square-info" data-aos="fade-up" data-aos-delay="1700" style="font-family: cursive;">
+                    <span style="display: flow;font-family: cursive;">Dziesiątki</span> <br> zadowolonych <br> klientów
                 </div>    
               </div>
             </div>
@@ -1284,9 +1329,15 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
                     <li data-aos="fade-up" data-aos-delay="1800"><span style="color: #72DE15;">&#10551;</span> serwisu opon i wulkanizacji</li>
                     <li data-aos="fade-up" data-aos-delay="1900"><span style="color: #72DE15;">&#10551;</span> ozonowanie kabin</li>
                   </ul>
+                  <p class="employees-left-text" data-aos="fade-right" data-aos-delay="2100" style="color: darkgray !important;border-radius: 20px;
+                  padding: 10px;
+                  background: #302E2E;">Zapraszamy do kontaktu <br>
+                                          tel.: 665 110 200 <br>
+                                          e-mail: serwis@tmas.pl
+                  </p>
             </div>
 
-            <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5">
+            <div class="col-lg-6 col-12 mt-lg-4 mb-lg-5" data-aos="fade-left" data-aos-delay="800">
                     <div class="serwrap" style="">
                         <div id="serarrow-left" class="serarrow"></div>
                         <div id="serslider" style="border-radius: 20px;">
@@ -1327,7 +1378,126 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
 
         </div>
     </div>
-    <section class="galery-image" id="galeriaID">
+    <section class="gal-images" id="galeriaID">
+        <div class="container mb-5 pb-lg-5">
+            <div class="row">        
+                <div class="col-12 title">
+                    <h2 class="mb-3 employees-title" style="padding: 0 !important;" data-aos="fade-up">Galeria</h2>
+                    <div class="title-undreline" data-aos="fade-right" data-aos-anchor-placement="right-right" data-aos-delay="700"></div>
+                    <div class="title-undreline2" data-aos="fade-left" data-aos-anchor-placement="left-left" data-aos-delay="900"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+       
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/1.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/2.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/3.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/4.JPEG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/5.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/6.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/7.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/8.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/9.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/10.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/11.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/12.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/13.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/14.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/15.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/16.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/17.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/18.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/19.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/20.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/21.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/22.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/23.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/24.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/25.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/26.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/27.JPG" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/28.JPG" alt=""></div>
+            </div>
+             <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/29.JPG" alt=""></div>
+            </div>
+
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/30.jpg" alt=""></div>
+            </div>
+
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/31.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/32.jpg" alt=""></div>
+            </div>
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/33.jpg" alt=""></div>
+            </div>  
+            <div class="gallery-item" onclick="this.classList.toggle('full')">
+                <div class="content"><img src="./img/gallery/34.jpg" alt=""></div>
+            </div>         
+        </div>
+    </section>
+    <!-- <section class="galery-image" id="galeriaID">
         <div class="container mb-5 pb-lg-5">
             <div class="row">        
                 <div class="col-12 title">
@@ -1432,7 +1602,7 @@ Dzięki długoletniemu doświadczeniu naszych pracowników na rynku zarówno kra
             <img src="./img/gallery/15.JPG" alt="" loading="lazy">
           </li>
       </ul>
-    </section>
+    </section> -->
     <section class="contact-us" id="contact-section">
         <div class="container mb-1 pb-lg-1">
             <div class="row">        
